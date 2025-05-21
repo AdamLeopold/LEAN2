@@ -165,7 +165,7 @@ if has_document == "Yes":
         # 欢迎消息（仅首次显示）
         with response_container:
             if st.session_state.first_run:
-                st.markdown(f"## = Ask me anything about {uploaded_file.name} ")
+                st.markdown(f"## Ask me anything about {uploaded_file.name} ")
                 st.session_state.first_run = False
 
 
