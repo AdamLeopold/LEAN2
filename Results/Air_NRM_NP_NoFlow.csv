@@ -1,0 +1,481 @@
+Query,Obj,LLM Revenue,Model,Code,Our Set,Optimal Set,LLM Count
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights with an origin-destination: OD = ('A', 'B') and a departure period (10am-2pm) in which the flights are: [(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('A', 'B') AND Departure Time='12:55')]",275590.1459,275590.146,,,"AB11:20,AB12:40,AB13:55","AB11:20,AB12:40,AB13:55",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights with an origin-destination: OD = ('C', 'A') and a departure period (7am-8pm) in which the flights are: [(OD = ('C', 'A') AND Departure Time='14:15'), (OD = ('C', 'A') AND Departure Time='16:55'), (OD = ('C', 'A') AND Departure Time='18:30'), (OD = ('C', 'A') AND Departure Time='7:40')]",476779.6341,476779.634,,,"CA07:40,CA16:55,CA18:30","CA07:40,CA16:55,CA18:30",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights with an origin-destination: OD = ('C', 'B') and a departure period (7am-5pm) in which the flights are: [(OD = ('C', 'B') AND Departure Time='7:40'), (OD = ('C', 'B') AND Departure Time='10:45'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('C', 'B') AND Departure Time='16:55')]",118065.4175,118065.418,,,CB7:40 CB10:45 CB 14:15,CB7:40 CB10:45 CB 14:15,1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights with an origin-destination: OD = ('B', 'C') and a departure period (10am-9pm) in which the flights are: [(OD = ('B', 'C') AND Departure Time='12:25'), (OD = ('B', 'C') AND Departure Time='14:25'), (OD = ('B', 'C') AND Departure Time='15:40'), (OD = ('B', 'C') AND Departure Time='11:20'), (OD = ('B', 'C') AND Departure Time='16:30'), (OD = ('B', 'C') AND Departure Time='19:05')]",91162.05147,91162.0515,,,"BC11:20,BC16:30,BC19:05","BC11:20,BC16:30,BC19:05",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights with an origin-destination: OD = ('B', 'C') and a departure period (10am-9pm) in which the flights are: [(OD = ('B', 'C') AND Departure Time='12:25'), (OD = ('B', 'C') AND Departure Time='14:25'), (OD = ('B', 'C') AND Departure Time='15:40'), (OD = ('B', 'C') AND Departure Time='11:20'), (OD = ('B', 'C') AND Departure Time='16:30'), (OD = ('B', 'C') AND Departure Time='19:05')]",117631.2751,117631.275,,,"BC11:20,BC12:25,BC15:40,BC16:30,BC19:05","BC11:20,BC12:25,BC15:40,BC16:30,BC19:05",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 4 flights that maximize total ticket sale revenue, specifically among flights with an origin-destination: OD = ('B', 'C') and a departure period (10am-9pm) in which the flights are: [(OD = ('B', 'C') AND Departure Time='12:25'), (OD = ('B', 'C') AND Departure Time='14:25'), (OD = ('B', 'C') AND Departure Time='15:40'), (OD = ('B', 'C') AND Departure Time='11:20'), (OD = ('B', 'C') AND Departure Time='16:30'), (OD = ('B', 'C') AND Departure Time='19:05')]",110505.6601,110505.66,,,"BC12:25, BC11:20,BC16:30, BC19:05","BC12:25, BC11:20,BC16:30, BC19:05",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 4 flights that maximize total ticket sale revenue, specifically among flights with an origin-destination: OD = ('A', 'B') and a departure period (11am-8pm) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('A', 'B') AND Departure Time='17:05'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('A', 'B') AND Departure Time='19:10')]",390722.9547,390722.955,,,"AB11:20,AB12:40,AB13:55,AB17:05","AB11:20,AB12:40,AB13:55,AB17:05",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights with an origin-destination: OD = ('A', 'B') and a departure period (11am-8pm) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('A', 'B') AND Departure Time='17:05'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('A', 'B') AND Departure Time='19:10')]",318074.8222,318074.822,,,"AB11:20,AB13:55,AB17:05","AB11:20,AB13:55,AB17:05",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights with an origin-destination: OD = ('A', 'B') and a departure period (11am-8pm) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('A', 'B') AND Departure Time='17:05'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('A', 'B') AND Departure Time='19:10')]",462621.8489,462621.849,,,"AB11:20,AB12:40,AB13:55,AB16:05,AB17:05","AB11:20,AB12:40,AB13:55,AB16:05,AB17:05",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights with an origin place A and the origin-destination pairs are: OD = ('A', 'B') or OD = ('A', 'C') in a departure period (10am-7pm) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'C') AND Departure Time='13:05'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('A', 'C') AND Departure Time='15:45'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('A', 'B') AND Departure Time='17:05'), (OD = ('A', 'C') AND Departure Time='17:25'), (OD = ('A', 'B') AND Departure Time='18:00')]",336806.0969,336806.097,,,"AB13:55,AB17:05,AC15:45","AB13:55,AB17:05,AC15:45",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 4 flights that maximize total ticket sale revenue, specifically among flights with an origin place A and the origin-destination pairs are: OD = ('A', 'B') or OD = ('A', 'C') in a departure period (12pm-8pm) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'C') AND Departure Time='13:05'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('A', 'C') AND Departure Time='15:45'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('A', 'B') AND Departure Time='17:05'), (OD = ('A', 'C') AND Departure Time='17:25'), (OD = ('A', 'B') AND Departure Time='18:00'),(OD = ('A', 'B') AND Departure Time='19:10')]",445234.1162,445234.116,,,"AB13:55,AB17:05,AC15:45,AC17:25","AB13:55,AB17:05,AC15:45,AC17:25",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights with an origin place A and the origin-destination pairs are: OD = ('A', 'B') or OD = ('A', 'C') in a departure period (1pm-1am) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='19:10'), (OD = ('A', 'B') AND Departure Time='22:45), (OD = ('A', 'C') AND Departure Time='13:05'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('A', 'C') AND Departure Time='15:45'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('A', 'B') AND Departure Time='17:05'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('A', 'C') AND Departure Time='17:25'), (OD = ('A', 'C') AND Departure Time='0:00') ]",554091.4061,554091.406,,,"AB13:55,AB17:05,AC00:00,AC15:45,AC17:25","AB13:55,AB17:05,AC00:00,AC15:45,AC17:25",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights with an origin place A and the origin-destination pairs are: OD = ('A', 'B') or OD = ('A', 'C') in a departure period (10am-11pm) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'C') AND Departure Time='13:05'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('A', 'C') AND Departure Time='15:45'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('A', 'C') AND Departure Time='17:25'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('A', 'B') AND Departure Time='19:10'), (OD = ('A', 'B') AND Departure Time='22:45')]",336806.0969,336806.097,,,"AB13:55,AB17:05,AC15:45","AB13:55,AB17:05,AC15:45",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 4 flights that maximize total ticket sale revenue, specifically among flights with an origin place A and the origin-destination pairs are: OD = ('A', 'B') or OD = ('A', 'C') in a departure period (10am-11pm) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'C') AND Departure Time='13:05'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('A', 'C') AND Departure Time='15:45'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('A', 'C') AND Departure Time='17:25'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('A', 'B') AND Departure Time='19:10'), (OD = ('A', 'B') AND Departure Time='22:45')]",445234.1162,445234.116,,,"AB13:55,AB17:05,AC15:45,AC17:25","AB13:55,AB17:05,AC15:45,AC17:25",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights with an origin place A and the origin-destination pairs are: OD = ('A', 'B') or OD = ('A', 'C') in a departure period (10am-11pm) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'C') AND Departure Time='13:05'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('A', 'C') AND Departure Time='15:45'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('A', 'C') AND Departure Time='17:25'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('A', 'B') AND Departure Time='19:10'), (OD = ('A', 'B') AND Departure Time='22:45')]",544304.209,544304.209,,,"AB13:55,AB17:05,AC13:05,AC15:45,AC17:25","AB13:55,AB17:05,AC13:05,AC15:45,AC17:25",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights with a sharing destination place B and the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') in a departure period (7am-7pm) in which the optional flights are: [(OD = ('C', 'B') AND Departure Time='7:40'),(OD = ('C', 'B') AND Departure Time='10:45'),(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30')]",482459.5983,482459.598,,,"AB11:20,AB12:40,AB13:55,AB17:05,CB12:35","AB11:20,AB12:40,AB13:55,AB17:05,CB12:35",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 4 flights that maximize total ticket sale revenue, specifically among flights with a sharing destination place B and the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') in a departure period (7am-7pm) in which the optional flights are: [(OD = ('C', 'B') AND Departure Time='7:40'),(OD = ('C', 'B') AND Departure Time='10:45'),(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30')]",409811.4658,409811.466,,,"AB11:20,AB13:55,AB17:05,CB12:35","AB11:20,AB13:55,AB17:05,CB12:35",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights with a sharing destination place B and the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') in a departure period (7am-7pm) in which the optional flights are: [(OD = ('C', 'B') AND Departure Time='7:40'),(OD = ('C', 'B') AND Departure Time='10:45'),(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30')]",318074.8222,318074.822,,,"AB11:20,AB13:55,AB17:05","AB11:20,AB13:55,AB17:05",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights with a sharing destination place B and the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') in a departure period (7am-11pm) in which the optional flights are: [(OD = ('C', 'B') AND Departure Time='7:40'),(OD = ('C', 'B') AND Departure Time='10:45'),(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30'), ('A', 'B') AND Departure Time='19:10'), (OD = ('A', 'B') AND Departure Time='22:45')]",507222.0575,507222.058,,,"AB11:20,AB13:55,AB17:05,AB22:45,CB12:35","AB11:20,AB13:55,AB17:05,AB22:45,CB12:35",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 4 flights that maximize total ticket sale revenue, specifically among flights with a sharing destination place B and the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') in a departure period (7am-11pm) in which the optional flights are: [(OD = ('C', 'B') AND Departure Time='7:40'),(OD = ('C', 'B') AND Departure Time='10:45'),(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30'), ('A', 'B') AND Departure Time='19:10'), (OD = ('A', 'B') AND Departure Time='22:45')]",415485.4139,415485.414,,,"AB11:20,AB13:55,AB17:05,AB22:45","AB11:20,AB13:55,AB17:05,AB22:45",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights with a sharing destination place B and the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') in a departure period (7am-11pm) in which the optional flights are: [(OD = ('C', 'B') AND Departure Time='7:40'),(OD = ('C', 'B') AND Departure Time='10:45'),(OD = ('A', 'B') AND Departure Time='11:20'), (OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30'), ('A', 'B') AND Departure Time='19:10'), (OD = ('A', 'B') AND Departure Time='22:45')]",322257.4346,322257.435,,,"AB13:55,AB17:05,AB22:45","AB13:55,AB17:05,AB22:45",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') or OD = ('B', 'C') in a departure period (9am-6pm) in which the optional flights are: [(OD = ('B', 'C') AND Departure Time='9:05'),(OD = ('C', 'B') AND Departure Time='10:45'),(OD = ('A', 'B') AND Departure Time='11:20'),('B', 'C') AND Departure Time='11:20'), ('B', 'C') AND Departure Time='12:25'),(OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), ('B', 'C') AND Departure Time='14:25'),('B', 'C') AND Departure Time='15:40''),(OD = ('A', 'B') AND Departure Time='16:05'), ('B', 'C') AND Departure Time='16:30'),(OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00')]",318074.8222,318074.822,,,"AB11:20,AB13:55,AB17:05","AB11:20,AB13:55,AB17:05",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 4 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') or OD = ('B', 'C') in a departure period (10am-7pm) in which the optional flights are: [(OD = ('C', 'B') AND Departure Time='10:45'),(OD = ('A', 'B') AND Departure Time='11:20'),('B', 'C') AND Departure Time='11:20'), ('B', 'C') AND Departure Time='12:25'),(OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), ('B', 'C') AND Departure Time='14:25'),('B', 'C') AND Departure Time='15:40''),(OD = ('A', 'B') AND Departure Time='16:05'), ('B', 'C') AND Departure Time='16:30'),(OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30')]",409811.4658,409811.466,,,"AB11:20,AB13:55,AB17:05,CB12:35","AB11:20,AB13:55,AB17:05,CB12:35",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') or OD = ('B', 'C') in a departure period (11am-8pm) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='11:20'),('B', 'C') AND Departure Time='11:20'), ('B', 'C') AND Departure Time='12:25'),(OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), ('B', 'C') AND Departure Time='14:25'),('B', 'C') AND Departure Time='15:40''),(OD = ('A', 'B') AND Departure Time='16:05'), ('B', 'C') AND Departure Time='16:30'),(OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30'), OD = ('B', 'C') AND Departure Time='19:05')]",482459.5983,482459.598,,,"AB11:20,AB12:40,AB13:55,AB17:05,CB12:35","AB11:20,AB12:40,AB13:55,AB17:05,CB12:35",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), and consider that each Eco_flex ticket consumes 1.2 units of flight capacity, develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') or OD = ('B', 'C') in a departure period (10am-8pm) in which the optional flights are: [(OD = ('C', 'B') AND Departure Time='10:45'), (OD = ('A', 'B') AND Departure Time='11:20'),('B', 'C') AND Departure Time='11:20'), ('B', 'C') AND Departure Time='12:25'),(OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), ('B', 'C') AND Departure Time='14:25'),('B', 'C') AND Departure Time='15:40''),(OD = ('A', 'B') AND Departure Time='16:05'), ('B', 'C') AND Departure Time='16:30'),(OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30'), OD = ('B', 'C') AND Departure Time='19:05'), (OD = ('A', 'B') AND Departure Time='19:10')]",482459.5983,482459.5983,,,"AB11:20, CB12:35, AB12:40, AB13:55, AB17:05","AB11:20, CB12:35, AB12:40, AB13:55, AB17:05",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), and consider that each Eco_flex ticket consumes 2 units of flight capacity, develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 4 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') or OD = ('B', 'C') in a departure period (7am-7:pm) in which the optional flights are: [(OD = ('C', 'B') AND Departure Time='7:40'), ('B', 'C') AND Departure Time='9:05'),(OD = ('C', 'B') AND Departure Time='10:45'), (OD = ('A', 'B') AND Departure Time='11:20'),('B', 'C') AND Departure Time='11:20'), ('B', 'C') AND Departure Time='12:25'),(OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), ('B', 'C') AND Departure Time='14:25'),('B', 'C') AND Departure Time='15:40''),(OD = ('A', 'B') AND Departure Time='16:05'), ('B', 'C') AND Departure Time='16:30'),(OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30')]",400707.3172,400707.3172,,,"AB11:20, CB12:35, AB13:55, AB17:05","AB11:20, CB12:35, AB13:55, AB17:05",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), and each Eco_flex ticket consumes 3 capacity, develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('A', 'B') or OD = ('C', 'B') or OD = ('B', 'C') in a departure period (11am-11pm) in which the optional flights are: [(OD = ('A', 'B') AND Departure Time='11:20'),('B', 'C') AND Departure Time='11:20'), ('B', 'C') AND Departure Time='12:25'),(OD = ('C', 'B') AND Departure Time='12:35'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('C', 'B') AND Departure Time='14:15'), ('B', 'C') AND Departure Time='14:25'),('B', 'C') AND Departure Time='15:40''),(OD = ('A', 'B') AND Departure Time='16:05'), ('B', 'C') AND Departure Time='16:30'),(OD = ('C', 'B') AND Departure Time='16:55'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('C', 'B') AND Departure Time='18:30'), OD = ('B', 'C') AND Departure Time='19:05'), (OD = ('A', 'B') AND Departure Time='19:10'), , (OD = ('A', 'B') AND Departure Time='22:45')]",322257.4346,322257.4346,,,"AB13:55, AB17:05, AB22:45","AB13:55, AB17:05, AB22:45",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), and consider that each Eco_flex ticket consumes 1.2 units of flight capacity, develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 3 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('A', 'B') or OD = ('B', 'A') or OD = ('B', 'C') in a departure period (9am-11pm) in which the optional flights are: [(OD = ('B', 'A') AND Departure Time='9:05'),(OD = ('B', 'C') AND Departure Time='9:05'),(OD = ('A', 'B') AND Departure Time='11:20'),(OD = ('B', 'C') AND Departure Time='11:20'),(OD = ('B', 'A') AND Departure Time='12:25'), (OD = ('B', 'C') AND Departure Time='12:25'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('B', 'A') AND Departure Time='14:25'), (OD = ('B', 'C') AND Departure Time='14:25'),(OD = ('B', 'C') AND Departure Time='15:40''),(OD = ('B', 'A') AND Departure Time='15:40''),(OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('B', 'C') AND Departure Time='16:30'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('B', 'A') AND Departure Time='18:50'), OD = ('B', 'C') AND Departure Time='19:05'), (OD = ('A', 'B') AND Departure Time='19:10'), ('B', 'A') AND Departure Time='20:25''), (OD = ('A', 'B') AND Departure Time='22:45')]",322257.4346,322257.4346,,,"AB13:55, AB17:05, AB22:45","AB13:55, AB17:05, AB22:45",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), and consider that each Eco_flex ticket consumes 2 units of flight capacity, develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 4 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('A', 'B') or OD = ('B', 'A') or OD = ('B', 'C') in a departure period (9am-11pm) in which the optional flights are: [(OD = ('B', 'A') AND Departure Time='9:05'),(OD = ('B', 'C') AND Departure Time='9:05'),(OD = ('A', 'B') AND Departure Time='11:20'),(OD = ('B', 'C') AND Departure Time='11:20'),(OD = ('B', 'A') AND Departure Time='12:25'), (OD = ('B', 'C') AND Departure Time='12:25'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('B', 'A') AND Departure Time='14:25'), (OD = ('B', 'C') AND Departure Time='14:25'),(OD = ('B', 'C') AND Departure Time='15:40''),(OD = ('B', 'A') AND Departure Time='15:40''),(OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('B', 'C') AND Departure Time='16:30'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('B', 'A') AND Departure Time='18:50'), OD = ('B', 'C') AND Departure Time='19:05'), (OD = ('A', 'B') AND Departure Time='19:10'), ('B', 'A') AND Departure Time='20:25''), (OD = ('A', 'B') AND Departure Time='22:45')]",415485.4139,415485.4139,,,"AB11:20, AB13:55, AB17:05, AB22:45","AB11:20, AB13:55, AB17:05, AB22:45",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), and consider that each Eco_flex ticket consumes 3 units of flight capacity, develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('A', 'B') or OD = ('B', 'A') or OD = ('B', 'C') in a departure period (9am-11pm) in which the optional flights are: [(OD = ('B', 'A') AND Departure Time='9:05'),(OD = ('B', 'C') AND Departure Time='9:05'),(OD = ('A', 'B') AND Departure Time='11:20'),(OD = ('B', 'C') AND Departure Time='11:20'),(OD = ('B', 'A') AND Departure Time='12:25'), (OD = ('B', 'C') AND Departure Time='12:25'),(OD = ('A', 'B') AND Departure Time='12:40'), (OD = ('A', 'B') AND Departure Time='12:55'), (OD = ('A', 'B') AND Departure Time='13:55'), (OD = ('B', 'A') AND Departure Time='14:25'), (OD = ('B', 'C') AND Departure Time='14:25'),(OD = ('B', 'C') AND Departure Time='15:40''),(OD = ('B', 'A') AND Departure Time='15:40''),(OD = ('A', 'B') AND Departure Time='16:05'), (OD = ('B', 'C') AND Departure Time='16:30'),(OD = ('A', 'B') AND Departure Time='17:05'),(OD = ('A', 'B') AND Departure Time='18:00'), (OD = ('B', 'A') AND Departure Time='18:50'), OD = ('B', 'C') AND Departure Time='19:05'), (OD = ('A', 'B') AND Departure Time='19:10'), (OD = ('B', 'A') AND Departure Time='20:25''), (OD = ('A', 'B') AND Departure Time='22:45')]",441816.347,440119.318,,,"AB11:20, AB13:55, BA14:25, AB17:05, AB22:45","AB11:20, AB13:55, BA15:40, AB17:05, AB22:45",0
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), and consider that each Eco_flex ticket consumes 1.2 units of flight capacity, develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('C', 'B') or OD = ('C', 'A') or OD = ('B', 'A') or OD = ('B', 'C') in a departure period (7am-9pm) in which the optional flights are: [(OD = ('C', 'A') AND Departure Time='7:40'), (OD = ('C', 'B') AND Departure Time='7:40'), (OD = ('B', 'A') AND Departure Time='9:05'),(OD = ('B', 'C') AND Departure Time='9:05'),(OD = ('B', 'C') AND Departure Time='11:20'),(OD = ('B', 'A') AND Departure Time='12:25'), (OD = ('B', 'C') AND Departure Time='12:25'),(OD = ('C', 'B') AND Departure Time='12:35'), (OD = ('C', 'A') AND Departure Time='14:15'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('B', 'A') AND Departure Time='14:25'), (OD = ('B', 'C') AND Departure Time='14:25'), (OD = ('B', 'A') AND Departure Time='15:40''), (OD = ('B', 'C') AND Departure Time='15:40''), (OD = ('B', 'C') AND Departure Time='16:30'),(OD = ('C', 'A') AND Departure Time='16:55'), (OD = ('C', 'B ') AND Departure Time='16:55'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('C', 'A') AND Departure Time='18:30'), (OD = ('C', 'B') AND Departure Time='18:30'),(OD = ('B', 'A') AND Departure Time='18:50'),  (OD = ('B', 'C') AND Departure Time='19:05'), (OD = ('B', 'A') AND Departure Time='20:25')]",674003.572,674003.572,"Objective Function: Maximize \sum_i (avg_price_f[i]*x_f[i] + avg_price_l[i]*x_l[i] )
+
+Capacity Constraints:
+
+capacity_consum*x_f[i] + x_l[i] <= 187
+
+Balance Constraints:
+
+ratio_f_list[i]* x_f[i] +  ratio_l_list[i]* x_l[i] + ratio_0_list[i]* x_o[i] <= avg_pax_f[i]  + avg_pax_l [i]
+
+Scale Constraints:
+x_f[i]/value_f_list[i] - x_o[i]/value_0_list[i] <=0
+x_l[i]/value_l_list[i] - x_o[i]/value_0_list[i] <=0
+
+M Constraints:
+
+x_f[i] <= 10000* y[i]
+x_l[i] <= 10000* y[i]
+x_o[i] <= 10000* y[i]
+
+Cardinality Constraints:
+
+\sum_i y[i] <= option_num
+
+Nonnegative Constraints: x_f[i],x_l[i],x_o[i] >= 0
+
+Binary Constraints: y[i] is binary, where decision variables are based on the list pt = ['CA7:40', 'CB7:40', 'BA09:05', 'BC09:05', 'BC11:20', 'BA12:25', 'BC12:25', 'CB12:35', 'CA14:15', 'CB14:15', 'BA14:25', 'BC14:25', 'BC16:30', 'CA16:55', 'CB16:55', 'CB17:40', 'CA18:30', 'CB18:30', 'BA18:50', 'BC19:05', 'BA20:25'], x_f = [x_code_f for code in pt], x_l = [x_code_l for code in pt], x_o = [x_code_o for code in pt], y = [y_code for code in pt] 
+
+avg_pax_f=['141.71', '22.79', '148.93', '17.5', '133.14', '103.79', '36.0', '156.57', '91.64', '33.71', '133.0', '9.4', '92.36', '149.29', '2.0', '127.36', '149.07', '13.57', '152.36', '137.14', '166.79'] 
+avg_pax_l=['17.0', '4.1', '17.21', '3.23', '14.5', '23.36', '3.79', '19.93', '17.86', '5.93', '28.93', '1.67', '6.36', '24.5', '2.4', '13.71', '17.43', '3.38', '26.29', '17.57', '14.29'] 
+avg_price_f=['1656.11', '1484.6', '1443.6', '1489.26', '873.59', '1479.64', '1520.65', '883.77', '1638.05', '1510.9', '1480.24', '1521.05', '907.06', '1665.33', '1583.0', '872.18', '1665.21', '1523.0', '1462.12', '875.17', '1462.84']  
+avg_price_l=['476.24', '450.8', '424.67', '443.62', '269.24', '470.28', '596.44', '299.39', '531.5', '496.51', '470.65', '821.73', '268.12', '493.28', '558.48', '265.62', '463.64', '443.91', '447.25', '282.71', '423.5']  
+value_f_list =['2.16', '2.16', '1.864', '1.864', '1.864', '3.079', '3.079', '2.826', '2.826', '2.826', '3.079', '3.079', '3.079', '2.826', '2.826', '2.826', '3.126', '3.126', '2.411', '2.411', '2.411']
+ratio_f_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_l_list=['1.127', '1.127', '1', '1', '1', '1.652', '1.652', '1.475', '1.475', '1.475', '1.652', '1.652', '1.652', '1.475', '1.475', '1.475', '1.631', '1.631', '1.293', '1.293', '1.293']
+ratio_l_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_0_list=['1.2', '1.2', '2.0', '2.0', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0']
+ratio_0_list=['1.72', '1.72', '3.7', '3.7', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7']
+option_num = 5 
+
+capacity_consum = 1.2","import gurobipy as gp
+from gurobipy import GRB
+import numpy as np
+
+pt = ['CA7:40', 'CB7:40', 'BA09:05', 'BC09:05', 'BC11:20', 'BA12:25', 'BC12:25', 'CB12:35', 'CA14:15', 'CB14:15', 'BA14:25', 'BC14:25', 'BC16:30', 'CA16:55', 'CB16:55', 'CB17:40', 'CA18:30', 'CB18:30', 'BA18:50', 'BC19:05', 'BA20:25']
+avg_pax_f=['141.71', '22.79', '148.93', '17.5', '133.14', '103.79', '36.0', '156.57', '91.64', '33.71', '133.0', '9.4', '92.36', '149.29', '2.0', '127.36', '149.07', '13.57', '152.36', '137.14', '166.79']
+avg_pax_l=['17.0', '4.1', '17.21', '3.23', '14.5', '23.36', '3.79', '19.93', '17.86', '5.93', '28.93', '1.67', '6.36', '24.5', '2.4', '13.71', '17.43', '3.38', '26.29', '17.57', '14.29']
+avg_price_f=['1656.11', '1484.6', '1443.6', '1489.26', '873.59', '1479.64', '1520.65', '883.77', '1638.05', '1510.9', '1480.24', '1521.05', '907.06', '1665.33', '1583.0', '872.18', '1665.21', '1523.0', '1462.12', '875.17', '1462.84']
+avg_price_l=['476.24', '450.8', '424.67', '443.62', '269.24', '470.28', '596.44', '299.39', '531.5', '496.51', '470.65', '821.73', '268.12', '493.28', '558.48', '265.62', '463.64', '443.91', '447.25', '282.71', '423.5']
+value_f_list =['2.16', '2.16', '1.864', '1.864', '1.864', '3.079', '3.079', '2.826', '2.826', '2.826', '3.079', '3.079', '3.079', '2.826', '2.826', '2.826', '3.126', '3.126', '2.411', '2.411', '2.411']
+ratio_f_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_l_list=['1.127', '1.127', '1', '1', '1', '1.652', '1.652', '1.475', '1.475', '1.475', '1.652', '1.652', '1.652', '1.475', '1.475', '1.475', '1.631', '1.631', '1.293', '1.293', '1.293']
+ratio_l_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_0_list=['1.2', '1.2', '2.0', '2.0', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0']
+ratio_0_list=['1.72', '1.72', '3.7', '3.7', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7']
+option_num = 5
+capacity_consum = 1.2
+
+# Create the model
+m = gp.Model(""Flight_Optimization"")
+
+# Decision variables
+x_f = m.addVars(pt, vtype=GRB.CONTINUOUS, name=""x_f"")
+x_l = m.addVars(pt, vtype=GRB.CONTINUOUS, name=""x_l"")
+x_o = m.addVars(pt, vtype=GRB.CONTINUOUS, name=""x_o"")
+y = m.addVars(pt, vtype=GRB.BINARY, name=""y"")
+
+# Objective function
+m.setObjective(
+gp.quicksum(float(avg_price_f[i]) * x_f[pt[i]] + float(avg_price_l[i]) * x_l[pt[i]] for i in range(len(pt))),
+GRB.MAXIMIZE
+)
+
+# Constraints
+for i in range(len(pt)):
+m.addConstr(capacity_consum * x_f[pt[i]] + x_l[pt[i]] <= 187)
+m.addConstr(x_f[pt[i]] <= 10000 * y[pt[i]])
+m.addConstr(x_l[pt[i]] <= 10000 * y[pt[i]])
+m.addConstr(x_o[pt[i]] <= 10000 * y[pt[i]])
+
+m.addConstr(float(ratio_f_list[i]) * x_f[pt[i]] + float(ratio_l_list[i]) * x_l[pt[i]] + float(ratio_0_list[i]) * x_o[pt[i]] <= float(avg_pax_f[i]) + float(avg_pax_l[i]))
+
+m.addConstr(x_f[pt[i]] / float(value_f_list[i]) <= x_o[pt[i]] / float(value_0_list[i]))
+m.addConstr(x_l[pt[i]] / float(value_l_list[i]) <= x_o[pt[i]] / float(value_0_list[i]))
+
+m.addConstr(gp.quicksum(y[pt[i]] for i in range(len(pt))) <= option_num)
+
+# Solve the model
+m.optimize()
+
+# Check if the model was solved successfully
+if m.status == GRB.OPTIMAL:
+print(""Optimal Solution Found:"")
+# Print decision variable values
+for var in m.getVars():
+print(var.VarName,var.X)
+else:
+print(""No optimal solution found. Status Code:"", m.status)","CA7:40, CB12:35, CA14:15, CA16:55, CA18:30","CA7:40, CB12:35, CA14:15, CA16:55, CA18:30",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), and consider that each Eco_flex ticket consumes 2 units of flight capacity, develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('C', 'B') or OD = ('C', 'A') or OD = ('B', 'A') or OD = ('B', 'C') in a departure period (7am-9pm) in which the optional flights are: [(OD = ('C', 'A') AND Departure Time='7:40'), (OD = ('C', 'B') AND Departure Time='7:40'), (OD = ('B', 'A') AND Departure Time='9:05'),(OD = ('B', 'C') AND Departure Time='9:05'),(OD = ('B', 'C') AND Departure Time='11:20'),(OD = ('B', 'A') AND Departure Time='12:25'), (OD = ('B', 'C') AND Departure Time='12:25'),(OD = ('C', 'B') AND Departure Time='12:35'), (OD = ('C', 'A') AND Departure Time='14:15'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('B', 'A') AND Departure Time='14:25'), (OD = ('B', 'C') AND Departure Time='14:25'), (OD = ('B', 'A') AND Departure Time='15:40''), (OD = ('B', 'C') AND Departure Time='15:40''), (OD = ('B', 'C') AND Departure Time='16:30'),(OD = ('C', 'A') AND Departure Time='16:55'), (OD = ('C', 'B ') AND Departure Time='16:55'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('C', 'A') AND Departure Time='18:30'), (OD = ('C', 'B') AND Departure Time='18:30'),(OD = ('B', 'A') AND Departure Time='18:50'),  (OD = ('B', 'C') AND Departure Time='19:05'), (OD = ('B', 'A') AND Departure Time='20:25')]",636026.7779,636026.7779,"Objective Function: Maximize \sum_i (avg_price_f[i]*x_f[i] + avg_price_l[i]*x_l[i] )
+
+Capacity Constraints:
+
+capacity_consum*x_f[i] + x_l[i] <= 187
+
+Balance Constraints:
+
+ratio_f_list[i]* x_f[i] +  ratio_l_list[i]* x_l[i] + ratio_0_list[i]* x_o[i] <= avg_pax_f[i]  + avg_pax_l [i]
+
+Scale Constraints:
+x_f[i]/value_f_list[i] - x_o[i]/value_0_list[i] <=0
+x_l[i]/value_l_list[i] - x_o[i]/value_0_list[i] <=0
+
+M Constraints:
+
+x_f[i] <= 10000* y[i]
+x_l[i] <= 10000* y[i]
+x_o[i] <= 10000* y[i]
+
+Cardinality Constraints:
+
+\sum_i y[i] <= option_num
+
+Nonnegative Constraints: x_f[i],x_l[i],x_o[i] >= 0
+
+Binary Constraints: y[i] is binary, where decision variables are based on the list pt = ['CA7:40', 'CB7:40', 'BA09:05', 'BC09:05', 'BC11:20', 'BA12:25', 'BC12:25', 'CB12:35', 'CA14:15', 'CB14:15', 'BA14:25', 'BC14:25', 'BC16:30', 'CA16:55', 'CB16:55', 'CB17:40', 'CA18:30', 'CB18:30', 'BA18:50', 'BC19:05', 'BA20:25'], x_f = [x_code_f for code in pt], x_l = [x_code_l for code in pt], x_o = [x_code_o for code in pt], y = [y_code for code in pt] 
+
+avg_pax_f=['141.71', '22.79', '148.93', '17.5', '133.14', '103.79', '36.0', '156.57', '91.64', '33.71', '133.0', '9.4', '92.36', '149.29', '2.0', '127.36', '149.07', '13.57', '152.36', '137.14', '166.79'] 
+avg_pax_l=['17.0', '4.1', '17.21', '3.23', '14.5', '23.36', '3.79', '19.93', '17.86', '5.93', '28.93', '1.67', '6.36', '24.5', '2.4', '13.71', '17.43', '3.38', '26.29', '17.57', '14.29'] 
+avg_price_f=['1656.11', '1484.6', '1443.6', '1489.26', '873.59', '1479.64', '1520.65', '883.77', '1638.05', '1510.9', '1480.24', '1521.05', '907.06', '1665.33', '1583.0', '872.18', '1665.21', '1523.0', '1462.12', '875.17', '1462.84']  
+avg_price_l=['476.24', '450.8', '424.67', '443.62', '269.24', '470.28', '596.44', '299.39', '531.5', '496.51', '470.65', '821.73', '268.12', '493.28', '558.48', '265.62', '463.64', '443.91', '447.25', '282.71', '423.5']  
+value_f_list =['2.16', '2.16', '1.864', '1.864', '1.864', '3.079', '3.079', '2.826', '2.826', '2.826', '3.079', '3.079', '3.079', '2.826', '2.826', '2.826', '3.126', '3.126', '2.411', '2.411', '2.411']
+ratio_f_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_l_list=['1.127', '1.127', '1', '1', '1', '1.652', '1.652', '1.475', '1.475', '1.475', '1.652', '1.652', '1.652', '1.475', '1.475', '1.475', '1.631', '1.631', '1.293', '1.293', '1.293']
+ratio_l_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_0_list=['1.2', '1.2', '2.0', '2.0', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0']
+ratio_0_list=['1.72', '1.72', '3.7', '3.7', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7']
+option_num = 5 
+
+capacity_consum = 2","import gurobipy as gp
+from gurobipy import GRB
+import numpy as np
+
+pt = ['CA7:40', 'CB7:40', 'BA09:05', 'BC09:05', 'BC11:20', 'BA12:25', 'BC12:25', 'CB12:35', 'CA14:15', 'CB14:15', 'BA14:25', 'BC14:25', 'BC16:30', 'CA16:55', 'CB16:55', 'CB17:40', 'CA18:30', 'CB18:30', 'BA18:50', 'BC19:05', 'BA20:25']
+avg_pax_f=['141.71', '22.79', '148.93', '17.5', '133.14', '103.79', '36.0', '156.57', '91.64', '33.71', '133.0', '9.4', '92.36', '149.29', '2.0', '127.36', '149.07', '13.57', '152.36', '137.14', '166.79']
+avg_pax_l=['17.0', '4.1', '17.21', '3.23', '14.5', '23.36', '3.79', '19.93', '17.86', '5.93', '28.93', '1.67', '6.36', '24.5', '2.4', '13.71', '17.43', '3.38', '26.29', '17.57', '14.29']
+avg_price_f=['1656.11', '1484.6', '1443.6', '1489.26', '873.59', '1479.64', '1520.65', '883.77', '1638.05', '1510.9', '1480.24', '1521.05', '907.06', '1665.33', '1583.0', '872.18', '1665.21', '1523.0', '1462.12', '875.17', '1462.84']
+avg_price_l=['476.24', '450.8', '424.67', '443.62', '269.24', '470.28', '596.44', '299.39', '531.5', '496.51', '470.65', '821.73', '268.12', '493.28', '558.48', '265.62', '463.64', '443.91', '447.25', '282.71', '423.5']
+value_f_list =['2.16', '2.16', '1.864', '1.864', '1.864', '3.079', '3.079', '2.826', '2.826', '2.826', '3.079', '3.079', '3.079', '2.826', '2.826', '2.826', '3.126', '3.126', '2.411', '2.411', '2.411']
+ratio_f_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_l_list=['1.127', '1.127', '1', '1', '1', '1.652', '1.652', '1.475', '1.475', '1.475', '1.652', '1.652', '1.652', '1.475', '1.475', '1.475', '1.631', '1.631', '1.293', '1.293', '1.293']
+ratio_l_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_0_list=['1.2', '1.2', '2.0', '2.0', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0']
+ratio_0_list=['1.72', '1.72', '3.7', '3.7', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7']
+option_num = 5
+capacity_consum = 2
+
+# Create the model
+m = gp.Model(""Flight_Optimization"")
+
+# Decision variables
+x_f = m.addVars(pt, vtype=GRB.CONTINUOUS, name=""x_f"")
+x_l = m.addVars(pt, vtype=GRB.CONTINUOUS, name=""x_l"")
+x_o = m.addVars(pt, vtype=GRB.CONTINUOUS, name=""x_o"")
+y = m.addVars(pt, vtype=GRB.BINARY, name=""y"")
+
+# Objective function
+m.setObjective(
+gp.quicksum(float(avg_price_f[i]) * x_f[pt[i]] + float(avg_price_l[i]) * x_l[pt[i]] for i in range(len(pt))),
+GRB.MAXIMIZE
+)
+
+# Constraints
+for i in range(len(pt)):
+m.addConstr(capacity_consum * x_f[pt[i]] + x_l[pt[i]] <= 187)
+m.addConstr(x_f[pt[i]] <= 10000 * y[pt[i]])
+m.addConstr(x_l[pt[i]] <= 10000 * y[pt[i]])
+m.addConstr(x_o[pt[i]] <= 10000 * y[pt[i]])
+
+m.addConstr(float(ratio_f_list[i]) * x_f[pt[i]] + float(ratio_l_list[i]) * x_l[pt[i]] + float(ratio_0_list[i]) * x_o[pt[i]] <= float(avg_pax_f[i]) + float(avg_pax_l[i]))
+
+m.addConstr(x_f[pt[i]] / float(value_f_list[i]) - x_o[pt[i]] / float(value_0_list[i]) <= 0)
+m.addConstr(x_l[pt[i]] / float(value_l_list[i]) - x_o[pt[i]] / float(value_0_list[i]) <= 0)
+
+m.addConstr(gp.quicksum(y[pt[i]] for i in range(len(pt))) <= option_num)
+
+# Solve the model
+m.optimize()
+
+# Check if the model was solved successfully
+if m.status == GRB.OPTIMAL:
+print(""Optimal Solution Found:"")
+# Print decision variable values
+for var in m.getVars():
+print(var.VarName,var.X)
+else:
+print(""No optimal solution found. Status Code:"", m.status)","CA7:40, CB12:35, CA14:15, CA16:55, CA18:30","CA7:40, CB12:35, CA14:15, CA16:55, CA18:30",1
+"Based on flight ticket options provided in 'information.csv', along with their associated attraction values (v1) and shadow attraction value ratios (v2), and consider that each Eco_flex ticket consumes 3 units of flight capacity, develop a Sales-Based Linear Programming (SBLP) model. The goal of this model is to recommend the optimal 5 flights that maximize total ticket sale revenue, specifically among flights the origin-destination pairs are: OD = ('C', 'B') or OD = ('C', 'A') or OD = ('B', 'A') or OD = ('B', 'C') in a departure period (7am-9pm) in which the optional flights are: [(OD = ('C', 'A') AND Departure Time='7:40'), (OD = ('C', 'B') AND Departure Time='7:40'), (OD = ('B', 'A') AND Departure Time='9:05'),(OD = ('B', 'C') AND Departure Time='9:05'),(OD = ('B', 'C') AND Departure Time='11:20'),(OD = ('B', 'A') AND Departure Time='12:25'), (OD = ('B', 'C') AND Departure Time='12:25'),(OD = ('C', 'B') AND Departure Time='12:35'), (OD = ('C', 'A') AND Departure Time='14:15'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('B', 'A') AND Departure Time='14:25'), (OD = ('B', 'C') AND Departure Time='14:25'), (OD = ('B', 'A') AND Departure Time='15:40''), (OD = ('B', 'C') AND Departure Time='15:40''), (OD = ('B', 'C') AND Departure Time='16:30'),(OD = ('C', 'A') AND Departure Time='16:55'), (OD = ('C', 'B ') AND Departure Time='16:55'),(OD = ('C', 'B') AND Departure Time='17:40'), (OD = ('C', 'A') AND Departure Time='18:30'), (OD = ('C', 'B') AND Departure Time='18:30'),(OD = ('B', 'A') AND Departure Time='18:50'),  (OD = ('B', 'C') AND Departure Time='19:05'), (OD = ('B', 'A') AND Departure Time='20:25')]",488743.0219,487045.993,"Objective Function: Maximize \sum_i (avg_price_f[i]*x_f[i] + avg_price_l[i]*x_l[i] )
+
+Capacity Constraints:
+
+capacity_consum*x_f[i] + x_l[i] <= 187
+
+Balance Constraints:
+
+ratio_f_list[i]* x_f[i] +  ratio_l_list[i]* x_l[i] + ratio_0_list[i]* x_o[i] <= avg_pax_f[i]  + avg_pax_l [i]
+
+Scale Constraints:
+x_f[i]/value_f_list[i] - x_o[i]/value_0_list[i] <=0
+x_l[i]/value_l_list[i] - x_o[i]/value_0_list[i] <=0
+
+M Constraints:
+
+x_f[i] <= 10000* y[i]
+x_l[i] <= 10000* y[i]
+x_o[i] <= 10000* y[i]
+
+Cardinality Constraints:
+
+\sum_i y[i] <= option_num
+
+Nonnegative Constraints: x_f[i],x_l[i],x_o[i] >= 0
+
+Binary Constraints: y[i] is binary, where decision variables are based on the list pt = ['CA7:40', 'CB7:40', 'BA09:05', 'BC09:05', 'BC11:20', 'BA12:25', 'BC12:25', 'CB12:35', 'CA14:15', 'CB14:15', 'BA14:25', 'BC14:25', 'BC16:30', 'CA16:55', 'CB16:55', 'CB17:40', 'CA18:30', 'CB18:30', 'BA18:50', 'BC19:05', 'BA20:25'], x_f = [x_code_f for code in pt], x_l = [x_code_l for code in pt], x_o = [x_code_o for code in pt], y = [y_code for code in pt] 
+
+avg_pax_f=['141.71', '22.79', '148.93', '17.5', '133.14', '103.79', '36.0', '156.57', '91.64', '33.71', '133.0', '9.4', '92.36', '149.29', '2.0', '127.36', '149.07', '13.57', '152.36', '137.14', '166.79'] 
+avg_pax_l=['17.0', '4.1', '17.21', '3.23', '14.5', '23.36', '3.79', '19.93', '17.86', '5.93', '28.93', '1.67', '6.36', '24.5', '2.4', '13.71', '17.43', '3.38', '26.29', '17.57', '14.29'] 
+avg_price_f=['1656.11', '1484.6', '1443.6', '1489.26', '873.59', '1479.64', '1520.65', '883.77', '1638.05', '1510.9', '1480.24', '1521.05', '907.06', '1665.33', '1583.0', '872.18', '1665.21', '1523.0', '1462.12', '875.17', '1462.84']  
+avg_price_l=['476.24', '450.8', '424.67', '443.62', '269.24', '470.28', '596.44', '299.39', '531.5', '496.51', '470.65', '821.73', '268.12', '493.28', '558.48', '265.62', '463.64', '443.91', '447.25', '282.71', '423.5']  
+value_f_list =['2.16', '2.16', '1.864', '1.864', '1.864', '3.079', '3.079', '2.826', '2.826', '2.826', '3.079', '3.079', '3.079', '2.826', '2.826', '2.826', '3.126', '3.126', '2.411', '2.411', '2.411']
+ratio_f_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_l_list=['1.127', '1.127', '1', '1', '1', '1.652', '1.652', '1.475', '1.475', '1.475', '1.652', '1.652', '1.652', '1.475', '1.475', '1.475', '1.631', '1.631', '1.293', '1.293', '1.293']
+ratio_l_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_0_list=['1.2', '1.2', '2.0', '2.0', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0']
+ratio_0_list=['1.72', '1.72', '3.7', '3.7', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7']
+option_num = 5 
+
+capacity_consum = 3","import gurobipy as gp
+from gurobipy import GRB
+import numpy as np
+
+pt = ['CA7:40', 'CB7:40', 'BA09:05', 'BC09:05', 'BC11:20', 'BA12:25', 'BC12:25', 'CB12:35', 'CA14:15', 'CB14:15', 'BA14:25', 'BC14:25', 'BC16:30', 'CA16:55', 'CB16:55', 'CB17:40', 'CA18:30', 'CB18:30', 'BA18:50', 'BC19:05', 'BA20:25']
+avg_pax_f=['141.71', '22.79', '148.93', '17.5', '133.14', '103.79', '36.0', '156.57', '91.64', '33.71', '133.0', '9.4', '92.36', '149.29', '2.0', '127.36', '149.07', '13.57', '152.36', '137.14', '166.79']
+avg_pax_l=['17.0', '4.1', '17.21', '3.23', '14.5', '23.36', '3.79', '19.93', '17.86', '5.93', '28.93', '1.67', '6.36', '24.5', '2.4', '13.71', '17.43', '3.38', '26.29', '17.57', '14.29']
+avg_price_f=['1656.11', '1484.6', '1443.6', '1489.26', '873.59', '1479.64', '1520.65', '883.77', '1638.05', '1510.9', '1480.24', '1521.05', '907.06', '1665.33', '1583.0', '872.18', '1665.21', '1523.0', '1462.12', '875.17', '1462.84']
+avg_price_l=['476.24', '450.8', '424.67', '443.62', '269.24', '470.28', '596.44', '299.39', '531.5', '496.51', '470.65', '821.73', '268.12', '493.28', '558.48', '265.62', '463.64', '443.91', '447.25', '282.71', '423.5']
+value_f_list =['2.16', '2.16', '1.864', '1.864', '1.864', '3.079', '3.079', '2.826', '2.826', '2.826', '3.079', '3.079', '3.079', '2.826', '2.826', '2.826', '3.126', '3.126', '2.411', '2.411', '2.411']
+ratio_f_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_l_list=['1.127', '1.127', '1', '1', '1', '1.652', '1.652', '1.475', '1.475', '1.475', '1.652', '1.652', '1.652', '1.475', '1.475', '1.475', '1.631', '1.631', '1.293', '1.293', '1.293']
+ratio_l_list=['0.97', '0.97', '0.9', '0.9', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9', '0.97', '0.97', '0.97', '0.97', '0.97', '0.9', '0.9', '0.9']
+value_0_list=['1.2', '1.2', '2.0', '2.0', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0', '1.2', '1.2', '1.2', '1.2', '1.2', '2.0', '2.0', '2.0']
+ratio_0_list=['1.72', '1.72', '3.7', '3.7', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7', '1.72', '1.72', '1.72', '1.72', '1.72', '3.7', '3.7', '3.7']
+option_num = 5
+capacity_consum = 3
+
+# Create the model
+m = gp.Model(""Flight_Optimization"")
+
+# Decision variables
+x_f = m.addVars(pt, vtype=GRB.CONTINUOUS, name=""x_f"")
+x_l = m.addVars(pt, vtype=GRB.CONTINUOUS, name=""x_l"")
+x_o = m.addVars(pt, vtype=GRB.CONTINUOUS, name=""x_o"")
+y = m.addVars(pt, vtype=GRB.BINARY, name=""y"")
+
+# Objective function
+m.setObjective(
+gp.quicksum(float(avg_price_f[i]) * x_f[pt[i]] + float(avg_price_l[i]) * x_l[pt[i]] for i in range(len(pt))),
+GRB.MAXIMIZE
+)
+
+# Constraints
+for i in range(len(pt)):
+m.addConstr(capacity_consum * x_f[pt[i]] + x_l[pt[i]] <= 187)
+m.addConstr(x_f[pt[i]] <= 10000 * y[pt[i]])
+m.addConstr(x_l[pt[i]] <= 10000 * y[pt[i]])
+m.addConstr(x_o[pt[i]] <= 10000 * y[pt[i]])
+
+m.addConstr(float(ratio_f_list[i]) * x_f[pt[i]] + float(ratio_l_list[i]) * x_l[pt[i]] + float(ratio_0_list[i]) * x_o[pt[i]] <= float(avg_pax_f[i]) + float(avg_pax_l[i]))
+
+m.addConstr(x_f[pt[i]] / float(value_f_list[i]) - x_o[pt[i]] / float(value_0_list[i]) <= 0)
+m.addConstr(x_l[pt[i]] / float(value_l_list[i]) - x_o[pt[i]] / float(value_0_list[i]) <= 0)
+
+m.addConstr(gp.quicksum(y[pt[i]] for i in range(len(pt))) <= option_num)
+
+# Solve the model
+m.optimize()
+
+# Check if the model was solved successfully
+if m.status == GRB.OPTIMAL:
+print(""Optimal Solution Found:"")
+# Print decision variable values
+for var in m.getVars():
+print(var.VarName,var.X)
+else:
+print(""No optimal solution found. Status Code:"", m.status)","CA7:40, CA14:15, BA14:25, CA16:55, CA18:30","CA7:40, CA14:15, BA15:40, CA16:55, CA18:30",0
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,

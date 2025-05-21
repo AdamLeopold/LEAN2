@@ -1,0 +1,290 @@
+prompt,decision_variable_scale,fewshot_example
+"For all flight ticket choices in 'information1.csv' with attraction values in v1 and ratios in v2, write the SBLP formulation for For all flight ticket choices in 'information1.csv' with attraction values in v1 and ratios in v2, write the SBLP formulation for (POS='B' AND Departure_Time_Flight1=18:30), (POS='B' AND Departure_Time_Flight1=22:45), (POS='B' AND Departure_Time_Flight1=19:10), (POS='B' AND Departure_Time_Flight1=7:40) and (POS='C' AND Departure_Time_Flight1= 12:25), (POS='C' AND Departure_Time_Flight1= 13:05), (POS='C' AND Departure_Time_Flight1= 14:15）, (POS='C' AND Departure_Time_Flight1= 14:25）, (POS='C' AND Departure_Time_Flight1= 15:40), (POS='C' AND Departure_Time_Flight1= 15:45) from 'information1.csv' following sales-based linear programming structure. following sales-based linear programming structure.",30,"
+    Question: For all flight ticket choices in 'information1.csv' with attraction values in v1 and ratios in v2, write the SBLP formulation for (POS='B' AND Departure_Time_Flight1=18:30), (POS='B' AND Departure_Time_Flight1=22:45), (POS='B' AND Departure_Time_Flight1=19:10), (POS='B' AND Departure_Time_Flight1=7:40) and (POS='C' AND Departure_Time_Flight1= 12:25), (POS='C' AND Departure_Time_Flight1= 13:05), (POS='C' AND Departure_Time_Flight1= 14:15）, (POS='C' AND Departure_Time_Flight1= 14:25）, (POS='C' AND Departure_Time_Flight1= 15:40), (POS='C' AND Departure_Time_Flight1= 15:45) from 'information1.csv' following sales-based linear programming structure.
+    Thought: First, I need to precisely filter flight ticket choices matching (POS='B' AND Departure_Time_Flight1=18:30), (POS='B' AND Departure_Time_Flight1=22:45), (POS='B' AND Departure_Time_Flight1=19:10), (POS='B' AND Departure_Time_Flight1=7:40) and (POS='C' AND Departure_Time_Flight1= 12:25), (POS='C' AND Departure_Time_Flight1= 13:05), (POS='C' AND Departure_Time_Flight1= 14:15）, (POS='C' AND Departure_Time_Flight1= 14:25）, (POS='C' AND Departure_Time_Flight1= 15:40), (POS='C' AND Departure_Time_Flight1= 15:45) from 'information1.csv'. This requires specifying exact parameter values in the query.
+
+    Action: CSVQA
+
+    Action Input:
+    FILTER BY:
+    - 4 entries of POS IN [B] with Departure_Time_Flight1 IN [18:30, 18:50, 19:10, 7:40]
+    - 6 entries of POS IN [C] with Departure_Time_Flight1 IN [12:25, 13:05, 14:15, 14:25, 15:40, 15:45]
+    - Oneway_Product IN [Eco_flexi, Eco_lite]  
+    COLUMNS NEEDED:
+    - POS (market_segment)
+    - Oneway_Product (product_type)
+    - avg_pax (Λ_component)
+    - avg_price (p_lk)
+    - capacity (segment_resource)
+    Cross-verify Expected Counts: 
+    - POS B: 4 time × 2 products = 8 records
+    - POS C: 6 times × 2 products = 12 records
+    - Total required records = 20
+
+    Observation:
+
+    the useful ticket choices are:
+    POS = B, Departure_Time_Flight1 = 18:30, Oneway_Product = Eco_flexi, avg_pax = 1.78, avg_price = 1509.7123733333333, capacity = 199 ;
+    POS = B, Departure_Time_Flight1 = 18:30, Oneway_Product = Eco_lite, avg_pax = 1.7142857142857142, avg_price = 401, capacity = 146 ;
+    POS = B, Departure_Time_Flight1 = 18:50, Oneway_Product = Eco_flexi, avg_pax = 16.18867924528302, avg_price = 1341.0819212430365, capacity = 182 ;
+    POS = B, Departure_Time_Flight1 = 18:50, Oneway_Product = Eco_lite, avg_pax = 5.32, avg_price = 457.1804181096681, capacity = 52 ;
+    POS = B, Departure_Time_Flight1 = 19:10, Oneway_Product = Eco_flexi, avg_pax = 6.155555555555556, avg_price = 1399.7700917782518, capacity = 22 ;
+    POS = B, Departure_Time_Flight1 = 19:10, Oneway_Product = Eco_lite, avg_pax = 1.9056603773584904, avg_price = 412.4301493710692, capacity = 166 ;
+    POS = B, Departure_Time_Flight1 = 7:40, Oneway_Product = Eco_flexi, avg_pax = 2.2093023255813957, avg_price = 1457.9343255813951, capacity = 73 ;
+    POS = B, Departure_Time_Flight1 = 7:40, Oneway_Product = Eco_lite, avg_pax = 1.6, avg_price = 401, capacity = 177 .
+    POS = C, Departure_Time_Flight1 = 12:25, Oneway_Product = Eco_flexi, avg_pax = 3.933333333333333, avg_price = 1520.5342967888407, capacity = 135 ;
+    POS = C, Departure_Time_Flight1 = 12:25, Oneway_Product = Eco_lite, avg_pax = 1.368421052631579, avg_price = 602.3789473684211, capacity = 60 .
+    POS = C, Departure_Time_Flight1 = 13:05, Oneway_Product = Eco_flexi, avg_pax = 5.0606060606060606, avg_price = 1587.7658724747475, capacity = 156 ;
+    POS = C, Departure_Time_Flight1 = 13:05, Oneway_Product = Eco_lite, avg_pax = 1.7115384615384617, avg_price = 625.2953205128205, capacity = 159 .
+    POS = C, Departure_Time_Flight1 = 14:15, Oneway_Product = Eco_flexi, avg_pax = 6.5174825174825175, avg_price = 1545.5878614338878, capacity = 60 ;
+    POS = C, Departure_Time_Flight1 = 14:15, Oneway_Product = Eco_lite, avg_pax = 2.865168539325843, avg_price = 491.25136209202776, capacity = 131 .
+    POS = C, Departure_Time_Flight1 = 14:25, Oneway_Product = Eco_flexi, avg_pax = 4, avg_price = 1559.8752, capacity = 169 ;
+    POS = C, Departure_Time_Flight1 = 14:25, Oneway_Product = Eco_lite, avg_pax = 2, avg_price = 989, capacity = 144 .
+    POS = C, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_flexi, avg_pax = 2.034482758620689, avg_price = 1547.2336091954023, capacity = 169 ;
+    POS = C, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_lite, avg_pax = 1.0, avg_price = 437.4285714285714, capacity = 31 .
+    POS = C, Departure_Time_Flight1 = 15:45, Oneway_Product = Eco_flexi, avg_pax = 7.405172413793103, avg_price = 1595.3596494252874, capacity = 162 ;
+    POS = C, Departure_Time_Flight1 = 15:45, Oneway_Product = Eco_lite, avg_pax = 2.0681818181818183, avg_price = 512.7078787878788, capacity = 65 .
+
+    Thought: Based on the previous observation, I now need to retrieve the attraction values from v1 and the attraction value ratios from v2 for the flight tickets and no_purchase choice based on the time range, POS, and Oneway_Product information including no-purchase options using tools ""coeff_retriever"".
+
+    Action: coeff_retriever
+
+    Action Input:
+    POS = B, Departure_Time_Flight1 = 18:30, Oneway_Product = Eco_flexi, avg_pax = 1.78, avg_price = 1509.7123733333333, capacity = 199 ;
+    POS = B, Departure_Time_Flight1 = 18:30, Oneway_Product = Eco_lite, avg_pax = 1.7142857142857142, avg_price = 401, capacity = 146 ;
+    POS = B, Departure_Time_Flight1 = 18:50, Oneway_Product = Eco_flexi, avg_pax = 16.18867924528302, avg_price = 1341.0819212430365, capacity = 182 ;
+    POS = B, Departure_Time_Flight1 = 18:50, Oneway_Product = Eco_lite, avg_pax = 5.32, avg_price = 457.1804181096681, capacity = 52 ;
+    POS = B, Departure_Time_Flight1 = 19:10, Oneway_Product = Eco_flexi, avg_pax = 6.155555555555556, avg_price = 1399.7700917782518, capacity = 22 ;
+    POS = B, Departure_Time_Flight1 = 19:10, Oneway_Product = Eco_lite, avg_pax = 1.9056603773584904, avg_price = 412.4301493710692, capacity = 166 ;
+    POS = B, Departure_Time_Flight1 = 7:40, Oneway_Product = Eco_flexi, avg_pax = 2.2093023255813957, avg_price = 1457.9343255813951, capacity = 73 ;
+    POS = B, Departure_Time_Flight1 = 7:40, Oneway_Product = Eco_lite, avg_pax = 1.6, avg_price = 401, capacity = 177 .
+    POS = C, Departure_Time_Flight1 = 12:25, Oneway_Product = Eco_flexi, avg_pax = 3.933333333333333, avg_price = 1520.5342967888407, capacity = 135 ;
+    POS = C, Departure_Time_Flight1 = 12:25, Oneway_Product = Eco_lite, avg_pax = 1.368421052631579, avg_price = 602.3789473684211, capacity = 60 .
+    POS = C, Departure_Time_Flight1 = 13:05, Oneway_Product = Eco_flexi, avg_pax = 5.0606060606060606, avg_price = 1587.7658724747475, capacity = 156 ;
+    POS = C, Departure_Time_Flight1 = 13:05, Oneway_Product = Eco_lite, avg_pax = 1.7115384615384617, avg_price = 625.2953205128205, capacity = 159 .
+    POS = C, Departure_Time_Flight1 = 14:15, Oneway_Product = Eco_flexi, avg_pax = 6.5174825174825175, avg_price = 1545.5878614338878, capacity = 60 ;
+    POS = C, Departure_Time_Flight1 = 14:15, Oneway_Product = Eco_lite, avg_pax = 2.865168539325843, avg_price = 491.25136209202776, capacity = 131 .
+    POS = C, Departure_Time_Flight1 = 14:25, Oneway_Product = Eco_flexi, avg_pax = 4, avg_price = 1559.8752, capacity = 169 ;
+    POS = C, Departure_Time_Flight1 = 14:25, Oneway_Product = Eco_lite, avg_pax = 2, avg_price = 989, capacity = 144 .
+    POS = C, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_flexi, avg_pax = 2.034482758620689, avg_price = 1547.2336091954023, capacity = 169 ;
+    POS = C, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_lite, avg_pax = 1.0, avg_price = 437.4285714285714, capacity = 31 .
+    POS = C, Departure_Time_Flight1 = 15:45, Oneway_Product = Eco_flexi, avg_pax = 7.405172413793103, avg_price = 1595.3596494252874, capacity = 162 ;
+    POS = C, Departure_Time_Flight1 = 15:45, Oneway_Product = Eco_lite, avg_pax = 2.0681818181818183, avg_price = 512.7078787878788, capacity = 65 .
+
+    Observation:
+    [2.410947925, 0.897867295, 1.293303762, 0.897867295, 2.410947925, 0.897867295, 1.293303762, 0.897867295, 2.410947925, 0.897867295, 1.293303762, 0.897867295, 2.197191601, 0.897867295, 1.178638549, 0.897867295, 2.825965285, 0.968196709, 1.474619514, 0.968196709, 2.825965285, 0.968196709, 1.474619514, 0.968196709, 2.825965285, 0.968196709, 1.474619514, 0.968196709, 2.825965285, 0.968196709, 1.474619514, 0.968196709, 2.825965285, 0.968196709, 1.474619514, 0.968196709, 2.825965285, 0.968196709, 1.474619514, 0.968196709, 2.0, 1.2, 3.703023968, 1.723521297]
+
+    Final Answer:
+    Decision Variables:
+    x_B1830_f, x_B1830_l, x_B1830_o (对应B1830段)
+    x_B1850_f, x_B1850_l, x_B1850_o (对应B1850段)
+    x_B1910_f, x_B1910_l, x_B1910_o (对应B1910段)
+    x_B740_f, x_B740_l, x_B740_o (对应B740段)
+    x_C1225_f, x_C1225_l, x_C1225_o (对应C1225段)
+    x_C1305_f, x_C1305_l, x_C1305_o (对应C1305段)
+    x_C1415_f, x_C1415_l, x_C1415_o (对应C1415段)
+    x_C1425_f, x_C1425_l, x_C1425_o (对应C1425段)
+    x_C1540_f, x_C1540_l, x_C1540_o (对应C1540段)
+    x_C1545_f, x_C1545_l, x_C1545_o (对应C1545段)
+
+    Objective (Max Revenue):
+    max 1509.7123733333333 x_B1830_f + 401 x_B1830_l +
+         1341.0819212430365 x_B1850_f + 457.1804181096681 x_B1850_l +
+         1399.7700917782518 x_B1910_f + 412.4301493710692 x_B1910_l +
+         1457.9343255813951 x_B740_f + 401 x_B740_l +
+         1520.5342967888407 x_C1225_f + 602.3789473684211 x_C1225_l +
+         1587.7658724747475 x_C1305_f + 625.2953205128205 x_C1305_l +
+         1545.5878614338878 x_C1415_f + 491.25136209202776 x_C1415_l +
+         1559.8752 x_C1425_f + 989 x_C1425_l +
+         1547.234 x_C1540_f + 437.429 x_C1540_l +
+         1595.3596494252874 x_C1545_f + 512.7078787878788 x_C1545_l
+
+    Constraints:
+    1. Capacity Constraints:
+        x_B1830_f + x_B1830_l <= 199+146 (对应B1830段总容量)
+        x_B1850_f + x_B1850_l <= 182+52 (对应B1850段总容量)
+        x_B1910_f+ x_B1910_l<= 35+22 (对应B1910段总容量)
+        x_B740_f+ x_B740_l <= 141 + 73 (对应B740段总容量)
+        x_C1225_f+ x_C1225_l<= 135+60 (对应C1225段总容量)
+        x_C1305_f+ x_C1305_l<= 159+60 (对应C1305段总容量)
+        x_C1415_f+ x_C1415_l<= 60 + 131 (对应C1415段总容量)
+        x_C1425_f+ x_C1425_l<= 169+144(对应C1425段总容量)
+        x_C1540_f + x_C1540_l ≤ 169+31    (对应C1540段总容量)
+        x_C1545_f+ x_C1545_l<= 162+65 (对应C1545段总容量)
+        
+        
+    2. Balance Constraints:
+      0.897867295 x_B1830_f + 0.897867295 x_B1830_l + 3.703023968 x_B1830_o <= 1.7142857142857142 + 1.78
+      0.897867295 x_B1850_f + 0.897867295 x_B1850_l + 3.703023968 x_B1850_o <= 16.18867924528302 + 5.32
+      0.897867295 x_B1910_f + 0.897867295 x_B1910_l + 3.703023968 x_B1910_o <= 6.155555555555556 + 1.9056603773584904
+      0.897867295 x_B740_f + 0.897867295 x_B740_l + 3.703023968 x_B740_o = 2.2093023255813957 + 1.6
+      0.968196709 x_C1225_f + 0.968196709 x_C1225_l + 1.723521297 x_C1225_o = 3.933333333333333 + 1.368421052631579
+      0.968196709 x_C1305_f + 0.968196709 x_C1305_l + 1.723521297 x_C1305_o = 5.0606060606060606 + 1.7115384615384617
+      0.968196709 x_C1415_f + 0.968196709 x_C1415_l + 1.723521297 x_C1415_o = 6.5174825174825175 + 2.865168539325843
+      0.968196709 x_C1425_f + 0.968196709 x_C1425_l + 1.723521297 x_C1425_o = 4 + 2
+      0.968196709 x_C1540_f + 0.968196709 x_C1540_l + 1.723521297 x_C1540_o = 2.2093023255813957 + 1
+      0.968196709 x_C1545_f + 0.968196709 x_C1545_l + 1.723521297 x_C1545_o = 7.405172413793103 + 2.0681818181818183
+      
+      Scale:
+      x_B1830_f/2.410947925 <= x_B1830_o/2
+      x_B1830_l/1.293303762 <= x_B1830_o/2
+      x_B1850_f/2.410947925 <= x_B1850_o/2
+      x_B1850_l/1.293303762 <= x_B1850_o/2
+      x_B1910_f/2.410947925 <= x_B1910_o/2
+      x_B1910_l/1.293303762 <= x_B1910_o/2
+      x_B740_f/2.197191601 <= x_B740_o/2
+      x_B740_l/1.178638549 <= x_B740_o/2
+      
+      x_C1225_f/2.825965285 <= x_C1225_o/1.2
+      x_C1225_l/1.474619514 <= x_C1225_o/1.2
+      x_C1305_f/1.474619514 <= x_C1305_o/1.2
+      x_C1305_l/2.825965285 <= x_C1305_o/1.2
+      x_C1415_f/1.474619514 <= x_C1415_o/1.2
+      x_C1415_l/2.825965285 <= x_C1415_o/1.2
+      x_C1425_f/1.474619514 <= x_C1425_o/1.2
+      x_C1425_l/2.825965285 <= x_C1425_o/1.2
+      x_C1540_f/2.825965285 <= x_C1540_o/1.2
+      x_C1540_l/1.474619514 <= x_C1540_o/1.2
+      x_C1545_f/2.825965285 <= x_C1545_o/1.2
+      x_C1545_l/1.474619514 <= x_C1545_o/1.2
+      Nonnegativity:
+      x_B1830_f>=0
+      x_B1830_l>=0
+      x_B1850_f>=0
+      x_B1850_l>=0
+      x_B1910_f>=0
+      x_B1910_l>=0
+      x_B740_f>=0
+      x_B740_l>=0
+      x_C1225_f>=0
+      x_C1225_l>=0
+      x_C1305_f>=0
+      x_C1305_l>=0
+      x_C1415_f>=0
+      x_C1415_l>=0
+      x_C1425_f>=0
+      x_C1425_l>=0
+      x_C1540_f>=0
+      x_C1540_l>=0
+      x_C1545_f>=0
+      x_C1545_l>=0
+"
+"Question: For all flight ticket choices detailed in 'information1.csv',and the attraction values ratios are in the data frame v2, and the attraction values are in data frame v1. write the sales-based linear formulation, including objective functions, capacity constraints, balance constraints, scale constraints, and nonnegative constraints for all flight ticket choices with POS A and departure time at 11:20, following sales-based linear programming structure.",3,"
+    Question: For all flight ticket choices detailed in 'information1.csv',and the attraction values ratios are in the data frame v2, and the attraction values are in data frame v1. write the sales-based linear formulation, including objective functions, capacity constraints, balance constraints, scale constraints, and nonnegative constraints for all flight ticket choices with POS A and departure time at 11:20.
+
+    Thought: I need to retrieve relevant information.
+
+    Action: CSVQA
+
+    Action Input: Retrieve all the required flight ticket choice information.
+
+    Observation:
+
+    the useful ticket choices are:
+    POS = A, departure_time t2 = 11:20, Oneway_product a2 = Eco_flexi, avg_pax d2 = 7.7441, avg_price p2 = 1382.3812, capacity c2 = 171 ;
+    POS = A, departure_time t3 = 11:20, Oneway_product a3 = Eco_lite, avg_pax d3 = 2.3524, avg_price p3 = 437.1889, capacity c_3 = 110 .
+
+    Thought: Based on the previous observation, I now need to retrieve the attraction values from v1 and the attraction value ratios from v2 for the flight tickets and no_purchase choice based on the time range, POS, and Oneway_Product information using tools ""coeff_retriever"". Don't forget to insert departure time into the retrieved information.
+
+    Action: coeff_retriever
+
+    Action Input:
+    POS = A, Departure_Time_Flight1 = 11:20, Oneway_Product a2 = Eco_flexi, avg_pax d2 = 7.7441, avg_price p2 = 1382.3812, capacity c2 = 171 ;
+    POS = A, Departure_Time_Flight1 = 11:20, Oneway_Product a3 = Eco_lite, avg_pax d3 = 2.3524, avg_price p3 = 437.1889, capacity c_3 = 110 .
+
+    Observation:
+    [2.049549474, 0.723044869, 1, 0.723044868, 0.9, 4.918824982]
+
+    The attraction value and attraction value ratio retrieved for POS A, time 11:20, and Product Eco_flexi are 2.049549474 and 0.723044869,
+    The attraction value and attraction value ratio retrieved for POS A, time 11:20, and Product Eco_lite are 1 and 0.723044868,
+    The attraction value and attraction value ratio of no_purchase at POS A are 0.9 and 4.918824982;
+
+    Final Answer:
+    objective function is: 1382.3812 x_Af + 437.1889 x_Al
+    Constraints:
+    capacity: x_Af + x_Al <= 171 + 110
+    balance:  0.723044869 x_Af + 0.723044868 x_Al + 4.918824982 x_Ao = 7.7441+2.3524
+    scale: x_Af/2.049549474 <= x_Ao/0.9
+           x_Al/1 <= x_Ao/0.9
+    nonnegativity: x_Af>=0
+                   x_Al>=0
+"
+"Question: For all flight ticket choices in 'information1.csv' with attraction values in v1 and ratios in v2, write the SBLP formulation for POS A/B/C flights departing at 15:40 following sales-based linear programming structure.",9,"few_shot_examples2 = f""""""
+    Question: For all flight ticket choices in 'information1.csv' with attraction values in v1 and ratios in v2, write the SBLP formulation for POS A/B/C flights departing at 15:40 following sales-based linear programming structure.
+    Thought: First, I need to precisely filter flight ticket choices matching POS A, POS B and POS C and departure time 15:40 from 'information1.csv'. This requires specifying exact parameter values in the query.
+
+    Action: CSVQA
+
+    Action Input:
+    FILTER BY:
+    - POS IN [A, B, C]
+    - Departure_Time_Flight1 = 15:40
+    - Oneway_Product IN [Eco_flexi, Eco_lite]  # 显式指定产品类型
+    COLUMNS NEEDED:
+    - POS (market_segment)
+    - Oneway_Product (product_type)
+    - avg_pax (Λ_component)
+    - avg_price (p_lk)
+    - capacity (segment_resource)
+
+    Observation:
+
+    the useful ticket choices are:
+    POS = A, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_flexi, avg_pax = 7.339506172839506, avg_price = 1418.4041867684784, capacity = 53 ;
+    POS = A, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_lite, avg_pax = 1.9069767441860463, avg_price = 434.0293023255813, capacity = 166 ;
+    POS = B, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_flexi, avg_pax = 16.03448275862069, avg_price = 1456.7674831577942, capacity = 94 ;
+    POS = B, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_lite, avg_pax = 4.206349206349207, avg_price = 459.0217457339838, capacity = 30 .
+    POS = C, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_flexi, avg_pax = 2.034482758620689, avg_price = 1547.2336091954023, capacity = 169 ;
+    POS = C, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_lite, avg_pax = 1.0, avg_price = 437.4285714285714, capacity = 31 .
+
+    Thought: Based on the previous observation, I now need to retrieve the attraction values from v1 and the attraction value ratios from v2 for the flight tickets and no_purchase choice based on the time range, POS, and Oneway_Product information including no-purchase options using tools ""coeff_retriever"".
+
+    Action: coeff_retriever
+
+    Action Input:
+    POS = A, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_flexi, avg_pax = 7.339506172839506, avg_price = 1418.4041867684784, capacity = 53 ;
+    POS = A, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_lite, avg_pax = 1.9069767441860463, avg_price = 434.0293023255813, capacity = 166 ;
+    POS = B, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_flexi, avg_pax = 16.03448275862069, avg_price = 1456.7674831577942, capacity = 94 ;
+    POS = B, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_lite, avg_pax = 4.206349206349207, avg_price = 459.0217457339838, capacity = 30 .
+    POS = C, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_flexi, avg_pax = 2.034482758620689, avg_price = 1547.2336091954023, capacity = 169 ;
+    POS = C, Departure_Time_Flight1 = 15:40, Oneway_Product = Eco_lite, avg_pax = 1.0, avg_price = 437.4285714285714, capacity = 31 .
+
+    Observation:
+    [2.802690924, 0.723044868, 1.367466831, 0.723044869, 3.078800275, 0.897867295, 1.651559511, 0.897867295, 2.825965285, 0.968196709, 1.474619514, 0.968196709, 0.9, 2.0, 1.2, 4.918824982, 3.703023968, 1.723521297]
+
+    Final Answer:
+    Decision Variables:
+    x_A1540_f, x_A1540_l, x_A1540_0 (对应A1540段)
+    x_B1540_f, x_B1540_l, x_B1540_0 (对应B1540段)
+    x_C1540_f, x_C1540_l, x_C1540_0 (对应C1540段)
+
+    Objective (Max Revenue):
+    max 1418.404x_A1540_f + 434.029x_A1540_l +
+         1456.767x_B1540_f + 459.022x_B1540_l +
+         1547.234x_C1540_f + 437.429x_C1540_l
+
+    Constraints:
+    1. Capacity Constraints:
+       x_A1540_f + x_A1540_l ≤ 53+166  # A段总容量
+       x_B1540_f + x_B1540_l ≤ 94+30    # B段总容量
+       x_C1540_f + x_C1540_l ≤ 169+31   # C段总容量
+    2. Balance Constraints:
+      0.723044868 x_A1540_f + 0.723044869 x_A1540_l + 4.918824982 x_A1540_o = 7.339506172839506 + 1.9069767441860463 # A1540
+      0.897867295 x_B1540_f + 0.897867295 x_B1540_l + 3.703023968 x_B1540_o = 16.03448275862069 + 4.206349206349207
+      0.968196709 x_C1540_f + 0.968196709 x_C1540_l + 1.723521297 x_C1540_o = 2.034482758620689 + 1.0
+      Scale:
+      x_A1540_f/2.802690924 <= x_A1540_o/0.9
+      x_A1540_l/1.367466831 <= x_A1540_o/0.9
+      x_B1540_f/3.078800275 <= x_B1540_o/2
+      x_B1540_l/1.651559511 <= x_B1540_o/2
+      x_C1540_f/2.825965285 <= x_C1540_o/1.2
+      x_C1540_l/1.474619514 <= x_C1540_o/1.2
+      Nonnegativity:
+      x_A1540_f>=0
+      x_A1540_l>=0
+      x_B1540_f>=0
+      x_B1540_l>=0
+      x_C1540_f>=0
+      x_C1540_l>=0
+
+"""""""

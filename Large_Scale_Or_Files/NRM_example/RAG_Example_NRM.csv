@@ -1,0 +1,32 @@
+﻿prompt,Data_address,Label,Related
+"The data of the store offers several styles of Nike shoes is provided in ""Nike Shoes Sales.csv"". Through the dataset, the revenue of each shoes is listed in the column ""revenue"". The demand for each style is independent. The store's objective is to maximize the total expected revenue based on the fixed initial inventories of the Nike x Olivia Kim brand, which are detailed in column ""inventory"". During the sales horizon, no replenishment is allowed, and there are no in-transit inventories. Customer arrivals, corresponding to demand for different styles of Nike shoes, occur in each period according to a Poisson process, with arrival rates specified in column ""demand"". Moreover, the trade will be started only when the total demand is no less than 100 to ensure the trading efficiency. The decision variables y_i represent the number of customer requests the store intends to fulfill for Nike shoe style i, with each y_i being a positive integer.
+","Large_Scale_Or_Files/NRM_example/nike Shoes Sales.csv
+","Maximize
+   11197 x_1 + 9097 x_2 + 11197 x_3 + 9995 x_4
+Subject To
+   inventory_constraint: 
+   x_1 <= 97
+   x_2 <= 240
+   x_3 <= 322
+   x_4 <= 281
+   demand_constraint: 
+   x_1 <= 17
+   x_2 <= 26
+   x_3 <= 50
+   x_4 <= 53
+   startup_constraint:
+   x_1+x_2+x_3+x_4 >=100
+Where
+x_i represents the number of customer requests the store intends to fulfill for Nike x Olivia Kim shoe style i, with each x_i being a positive integer.
+
+","Nike x OliviaKim
+"
+"A luxury resort specializes in offering high-demand services, including premium experiences such as private beach dinners, deep-sea diving excursions, and customized spa packages. The resort’s revenue data for these services is recorded in the 'Revenue' column. Each service follows an independent demand stream, influenced by factors like seasonality, marketing campaigns, and guest preferences.
+
+The resort’s objective is to maximize total expected revenue by optimizing the allocation of its premium suites (e.g., ocean-view villas, presidential suites) listed in the 'Initial Inventory' column. Throughout the booking period, guest requests for these suites arrive sequentially following a Poisson process, with demand details specified in the 'Demand' column. The decision variables, denoted by x_i, represent the number of units of each suite category the resort plans to allocate to guest reservations. The resort aims to maximize revenue while adhering to inventory constraints and operational considerations.","Large_Scale_Or_Files/NRM_example/OnlineSalesDataset.csv
+","\begin{align*}
+\max ~& \sum_{i \in I} r_i x_i \\
+\text{s.t.} ~& x_i \leq J_i, \quad \forall i \in I \\
+~& x_i \leq D_i, \quad \forall i \in I \\
+~& x_i \in \mathbb{Z}^+, \quad \forall i \in I
+\end{align*} where I = {1,2,3,...,}, r= [19.99, 29.99, 44.99, 29.99, 79.99, 64.99, 179.99, 179.99, 49.99, 249.99, 49.99, 23.00, 59.99, 199.00, 599.00, 549.00, 249.99, 1199.99, 2399.00, 179.00, 399.99, 599.99, 16.99, 199.99, 32.50, 15.00, 599.99, 299.99, 299.00, 129.00, 299.99, 149.99, 699.99, 399.99, 499.95, 199.95, 299.95, 299.99, 29.99, 3899.99, 749.99, 79.00, 14.99, 49.99, 129.99, 100.00, 29.50, 52.00, 59.99, 49.99, 199.95, 199.99, 159.99, 899.99, 52.00, 78.00, 25.99, 499.99, 399.99, 499.99, 399.99, 28.00, 105.00, 219.99, 36.00, 34.00, 129.99, 99.95, 149.95, 229.95, 12.99, 24.00, 59.99, 34.99, 19.99, 49.99, 299.99, 999.99, 299.99, 499.99, 59.00, 16.00, 18.00, 399.99, 449.99, 22.99, 229.99, 169.00, 899.99, 649.99, 39.99, 1599.99, 89.99, 9.99, 24.99, 32.95, 39.95, 349.00, 89.99, 179.99, 139.99, 99.95, 139.99, 189.99, 79.99, 82.00, 129.99, 499.99, 379.99, 29.00, 39.99, 1299.99, 190.00, 102.00, 25.00, 69.99, 59.99, 98.00, 89.99], J= [20, 30, 20, 20, 20, 20, 10, 10, 20, 10, 20, 10, 20, 10, 10, 10, 10, 10, 10, 10, 20, 10, 20, 20, 20, 10, 10, 10, 10, 10, 20, 10, 10, 10, 10, 10, 10, 10, 30, 10, 10, 10, 10, 20, 10, 10, 10, 10, 20, 10, 10, 10, 10, 10, 10, 10, 20, 10, 20, 10, 10, 20, 10, 20, 10, 10, 10, 10, 10, 20, 30, 10, 20, 20, 30, 20, 10, 10, 10, 20, 10, 10, 10, 10, 10, 10, 20, 10, 50, 20, 20, 20, 10, 20, 10, 10, 10, 20, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 20, 20, 10, 10], D = [6, 7, 5, 4, 6, 6, 3, 3, 5, 2, 5, 3, 6, 3, 2, 2, 3, 2, 2, 3, 4, 3, 6, 5, 6, 2, 3, 2, 2, 2, 5, 3, 2, 2, 2, 2, 3, 2, 7, 2, 2, 2, 3, 5, 2, 2, 2, 2, 6, 3, 3, 2, 2, 2, 2, 2, 6, 2, 5, 2, 4, 2, 5, 2, 3, 3, 3, 5, 7, 2, 5, 6, 8, 5, 3, 2, 2, 5, 2, 3, 2, 4, 2, 3, 2, 2, 6, 2, 15, 4, 5, 6, 2, 4, 2, 3, 2, 5, 3, 2, 3, 2, 2, 3, 3, 3, 2, 2, 2, 5, 5, 3, 3].",

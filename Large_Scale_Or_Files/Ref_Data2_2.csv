@@ -1,0 +1,131 @@
+prompt,Data_address,Label,Related,Problem Type
+"The data of the store offers several styles of Nike shoes is provided in ""Nike Shoes Sales.csv"". Through the dataset, the revenue of each shoes is listed in the column ""revenue"". The demand for each style is independent. The store__ objective is to maximize the total expected revenue based on the fixed initial inventories of the Nike x Olivia Kim brand, which are detailed in column __nventory._ During the sales horizon, no replenishment is allowed, and there are no in-transit inventories. Customer arrivals, corresponding to demand for different styles of Nike shoes, occur in each period according to a Poisson process, with arrival rates specified in column __emand._ Moreover, the trade will be started only when the total demand is no less than 100 to ensure the trading efficiency. The decision variables y_i represent the number of customer requests the store intends to fulfill for Nike shoe style i, with each y_i being a positive integer.
+","NRM_example/nike Shoes Sales.csv
+","Maximize
+   11197 x_1 + 9097 x_2 + 11197 x_3 + 9995 x_4
+Subject To
+   inventory_constraint: 
+   x_1 <= 97
+   x_2 <= 240
+   x_3 <= 322
+   x_4 <= 281
+   demand_constraint: 
+   x_1 <= 17
+   x_2 <= 26
+   x_3 <= 50
+   x_4 <= 53
+   startup_constraint:
+   x_1+x_2+x_3+x_4 >=100
+Where
+x_i represents the number of customer requests the store intends to fulfill for Nike x Olivia Kim shoe style i, with each x_i being a positive integer.
+
+","Nike x OliviaKim
+",Network Revenue Management Problem
+"In a well-known coffee shop, there are two signature drinks (D1 and D2), each bringing in a profit of w_1 and w_2 respectively, , recorded in the 'Revenue' column. The data is avaiable in ""CoffeeShop.csv"". The demand for each drink varies independently. The coffee shop's goal is to decide which customer orders to fulfill during a specific busy period [0,10] to maximize the total expected revenue, based on the available ingredients. The current inventory for these drinks is c_1 and c_2 respectively, as recorded in the 'Initial Inventory' column. During this period, restocking is not possible, and no additional supplies are expected. Customers interested in ordering D1 and D2 arrive at the shop according to a Poisson process, with arrival rates a_1 and a_2 respectively. The demand information are specified in the 'Demand' column. The decision variables y_1 and y_2 represent the number of orders the coffee shop plans to fulfill for each of the two drinks, and these variables must be positive integers.",,,,Network Revenue Management Problem
+"In a popular bakery, there are three specialty pastries (S1, S2, S3), each offering a profit of w_1, w_2, and w_3 respectively, as listed in the column ""revenue"" of the provided dataset ""BakerySales.csv"". The demand for each pastry is distinct and varies from customer to customer. The bakery's goal is to determine which customer orders to fulfill during a single busy morning to maximize the total revenue, based on the limited quantity of pastries available. The current stock for these pastries is c_1, c_2, and c_3 respectively that can be found in the column ""inventory"". Restocking is not an option during this period, and no additional batches will be made. Customers looking to purchase P1, P2, and P3 arrive at the bakery according to a Poisson process, with arrival rates a_1, a_2, and a_3 specified in the column ""demand"" respectively. The decision variables y_1, y_2, and y_3 represent the number of orders the bakery plans to fulfill for each of the three pastries, and these must be positive integers.",,,,Network Revenue Management Problem
+"There are three best-selling items (P1, P2, P3) on Amazon with the profit w_1,w_2,w_3  listed in the ""revenue"" column of the provided dataset ""Amazon.csv"".There is an independent demand stream for each of the products. The objective of the company is to decide which demands to be fufilled over a sales horizon [0,10] to maximize the total expected revenue from initial inventories. The on-hand inventories for the three items are c_1,c_2,c_3 respectively that can be found in the ""inventory"" colum. During the sales horizon, replenishment is not allowed and there is no any in-transit inventories. Customers who want to purchase P1,P2,P3 arrive at each period accoring to a Poisson process with a_1,a_2,a_3 the arrival rates respectively. Decision variables y_1,y_2,y_3 correspond to the number of requests that the firm plans to fulfill for product 1,2,3. These variables are all positive integers.",,,,Network Revenue Management Problem
+"There are three popular items (M1,M2, M3) in a local supermarket, each with a profit margin of w_1, w_2, and w_3 respectively listed in the ""revenue"" column of the dataset ""Supermarket.csv"". Each product has its own independent demand stream. The supermarket's goal is to determine which customer demands to meet over a fixed sales period [0,20] to maximize the total expected revenue based on the current stock levels. The inventory capacity for these three items is c_1, c_2, and c_3 respectively that can be found in the ""inventory"" column. During the sales period, restocking is not possible, and there are no goods currently being shipped. Customers who wish to buy P1, P2, and P3 arrive during each period following a Poisson process, with arrival rates of a_1, a_2, and a_3 respectively , specified in the ""demand"" column.. The decision variables y_1, y_2, and y_3 represent the number of requests the supermarket plans to fulfill for products 1, 2, and 3, respectively. These decision variables must be positive integers.",,,,Network Revenue Management Problem
+"A logistics compnay EW needs to load three types of of products, M1,M2,M3 into a fleet of delivery trucks. To be more specific, there are two trucks T1,T2. For each product, the company has a ""products.csv"" file that records a predefined value v_1,v_2,v_3 and a particular weight w_1,w_2,w_3. Each truck has a specific weight capacity c_1,c_2 that are detailed in the ""capacity.csv"" file. The objective is to determine how many units of each product to load into each truck so that the total value of the products loaded across all trucks can be maximized and the total weight of the products loaded in each truck does not exceed the truck's weight capacity. The decision variables x_11, x_12, x_13, x_21, x_22, and x_23 represent the number of units of product M1,M2,M3 loaded into the truck T1,T2. For example, x_12 denotes the specific number of product M2 carried by the truck T1. ",,,,Resource Allocation
+"A healthcare logistics company, HS, needs to distribute three types of medical supplies M1,M2, M3 to two regional medical centers R1 and R2. Each center has a specific storage capacity, denoted as c_2,c_2 that is provided in __apacity.csv_. Each supply type has a predefined profit p_1,p_2,p_3 and a specific weight w_1,w_2,w_3, provided in 'products.csv'. The goal is to determine the number of units of each medical supply to be delivered to and between the centers in such a way that the total value of supplies is maximized, while ensuring that the weight of supplies at each center does not exceed its capacity. The decision variables x_11, x_12, x_13, x_21, x_22, and x_23 represent the number of units of medical supplies M1,M2,M3 distributed into the regional medical centers R1,R2. ",,,,Resource Allocation
+"An e-commerce company needs to allocate warehouse space for three product lines, L1, L2, and L3, across two warehouses W1 and W2. Each warehouse has a storage capacity c_1, c_2 that can be found in the ""capacity.csv"" file, and each product line has a value r_1, r_2, r_3 and a required space s_1, s_2, s_3 as recorded in the ""products.csv"" file . The objective is to determine how many units of each product line to store in each warehouse to maximize revenue without exceeding storage capacity. The decision variables x_11, x_12, x_13, x_21, x_22, x_23 represent the units of product lines L1, L2, and L3 stored in warehouses W1 and W2. For example, x_12 denotes the units of product line L2 stored in warehouse W1.",,,,Resource Allocation
+"A beverage company needs to allocate three different flavors of drinks, F1, F2, and F3, across two distribution centers D1 and D2. Each distribution center has a maximum storage capacity c_1, c_2 as detailed in 'capacity.csv'. The 'products.csv' provides the predefined value v_1, v_2, v_3 and volume per unit v_1, v_2, v_3 of each drink flavor. The objective is to determine how many units of each flavor to store in each distribution center to maximize total profit while not exceeding the storage capacities. The decision variables x_11, x_12, x_13, x_21, x_22, x_23 represent the units of flavors F1, F2, and F3 stored in distribution centers D1 and D2. For example, x_12 denotes the number of units of flavor F2 stored in distribution center D1.",,,,Resource Allocation
+"A supermarket needs to allocate various products, including high-demand items like the Sony Alpha Refrigerator, Sony Bravia XR, and Sony PlayStation 5, across different retail shelves. The product values and space requirements are provided in the ""Products.csv"" dataset. Additionally, the store has multiple shelves, each with a total space limit and specific space constraints for Sony and Apple products, as outlined in the ""Capacity.csv"" file. The goal is to determine the optimal number of units of each Sony product to place on each shelf to maximize total value while ensuring that the space used by Sony products on each shelf does not exceed the brand-specific limits. The decision variables x_ij represent the number of units of product i to be placed on shelf j.
+","RA_example/capacity.csv
+RA_example/products.csv
+","Maximize
+   1818 x_0_0 + 1818 x_0_1 + 1818 x_0_2 + 1818 x_0_3 + 1818 x_0_4 + 1818 x_0_5 + 1609 x_1_0 + 1609 x_1_1 + 1609 x_1_2 + 1609 x_1_3 + 1609 x_1_4 + 1609 x_1_5 + 509 x_2_0 + 509 x_2_1 + 509 x_2_2 + 509 x_2_3 + 509 x_2_4 + 509 x_2_5 + 1808 x_3_0 + 1808 x_3_1 + 1808 x_3_2 + 1808 x_3_3 + 1808 x_3_4 + 1808 x_3_5 + 528 x_4_0 + 528 x_4_1 + 528 x_4_2 + 528 x_4_3 + 528 x_4_4 + 528 x_4_5 
+   
+Subject To
+ capacity_constraint: 
+ 400 x_0_0 + 200 x_1_0 + 40 x_2_0 + 60 x_3_0 + 50 x_4_0 <= 1200
+ 400 x_0_1 + 200 x_1_1 + 40 x_2_1 + 60 x_3_1 + 50 x_4_1 <= 1374
+ 400 x_0_2 + 200 x_1_2 + 40 x_2_2 + 60 x_3_2 + 50 x_4_2 <= 800
+ 400 x_0_3 + 200 x_1_3 + 40 x_2_3 + 60 x_3_3 + 50 x_4_3 <= 2042
+ 400 x_0_4 + 200 x_1_4 + 40 x_2_4 + 60 x_3_4 + 50 x_4_4 <= 1000
+ 400 x_0_5 + 200 x_1_5 + 40 x_2_5 + 60 x_3_5 + 50 x_4_5 <= 1800
+
+Generals
+ x_0_0  x_0_1  x_0_2  x_0_3  x_0_4  x_0_5
+ x_1_0  x_1_1  x_1_2  x_1_3  x_1_4  x_1_5
+ x_2_0  x_2_1  x_2_2  x_2_3  x_2_4  x_2_5
+ x_3_0  x_3_1  x_3_2  x_3_3  x_3_4  x_3_5
+ x_4_0  x_4_1  x_4_2  x_4_3  x_4_4  x_4_5
+END
+
+","Sony
+",Resource Allocation
+"Walmart stores play a critical role in supplying essential goods to various customer groups on a daily basis. The problem involves determining the optimal transportation plan that satisfies the demands of 4 customer groups, whose daily demand data is provided in ""customer_demands.csv"". These demands must be met using supplies from 3 Walmart stores, each with a specific daily supply capacity detailed in ""supply_capacity.csv"". The transportation cost per unit of goods from each Walmart store to each customer group is recorded in ""transportation_costs.csv"". The objective is to determine the quantity of goods transported from each Walmart store to each customer group, ensuring that all demands are met without exceeding the supply capacity of any store, while minimizing the total transportation cost.","TP_example/customer_demand.csv
+TP_example/supply_capacity.csv
+TP_example/transportation_costs.csv
+","Minimize
+   0.63 x_0_0 + 49.71 x_0_1 + 33.75 x_0_2 + 1570.67 x_0_3 + 605.47 x_1_0 + 64.53 x_1_1 + 478.47 x_1_2 + 887.04 x_1_3 + 1139.04 x_2_0 + 4.78 x_2_1 + 1805.62 x_2_2 + 1302.89 x_2_3 
+Subject To
+ demand_constraint:
+ x_0_0 + x_1_0 + x_2_0 >= 11
+ x_0_1 + x_1_1 + x_2_1 >= 1148
+ x_0_2 + x_1_2 + x_2_2 >= 54
+ x_0_3 + x_1_3 + x_2_3 >= 833
+ capacity_constraint:
+ x_0_0 + x_0_1 + x_0_2 + x_0_3 <= 4
+ x_1_0 + x_1_1 + x_1_2 + x_1_3 <= 575
+ x_2_0 + x_2_1 + x_2_2 + x_2_3 <= 1504
+Generals
+ x_0_0  x_0_1  x_0_2  x_0_3  x_1_0  x_1_1  x_1_2  x_1_3
+ x_2_0  x_2_1  x_2_2  x_2_3  
+END",,Transportation Problem
+"On an island, there are two fishing grounds (F1 and F2) that catch no more than p_1 and p_2 kilograms of seafood per day, respectively as detailed in ""supply_capacity.csv"". These seafood items need to be transported to three restaurants (H1, H2, and H3) with daily demands of d_1, d_2, and d_3 kilograms, respectively. The demand information is provided in ""customer_demands.csv"". The transportation costs from the fishing grounds to the restaurants (per kilogram) are as follows: from F1 to H1 is t_11 dollars, to H2 is t_12 dollars, to H3 is t_13 dollars; from F2 to H1 is t_21 dollars, to H2 is t_22 dollars, to H3 is t_23 dollars. The above transportation cost is recorded in ""transportation_costs.csv"". The fishing grounds need to devise a reasonable transportation plan to minimize the total cost of transporting seafood to the restaurants without exceeding the catch capacity of each fishing ground. x_11, x_12, x_13 represent the kilograms of seafood transported from fishing ground F1 to restaurants H1, H2, and H3, respectively. x_21, x_22, x_23 represent the kilograms of seafood transported from fishing ground F2 to restaurants H1, H2, and H3, respectively. All variables are positive real numbers.",,,,Transportation Problem
+"We have three engineers named Engineer A, B, and C. They need to be assigned to three different projects, which we simply call Project 1, 2, and 3. Each engineer incurs different costs to complete different projects; these costs reflect their familiarity and efficiency in completing the tasks for the projects. Engineer A incurs a cost of c_11 dollars to complete Project 1, c_12 dollars for Project 2, and c_13 dollars for Project 3. Engineer B incurs a cost of c_21 dollars for Project 1, c_22 dollars for Project 2, and c_23 dollars for Project 3. Engineer C incurs a cost of c_31 dollars for Project 1, c_32 dollars for Project 2, and c_33 dollars for Project 3. Our goal is to find an assignment method that minimizes the total cost of completing all projects. We need to allocate engineers to projects in a way that each engineer is assigned to the project  their cost is the lowest. At the same time, each project can only be assigned to one engineer, and each engineer can only work on one project at a time. Let x_11, x_12, x_13 be 1 if Projects 1, 2, and 3 are assigned to Engineer A, respectively, and 0 otherwise. Let x_21, x_22, x_23 be 1 if Projects 1, 2, and 3 are assigned to Engineer B, respectively, and 0 otherwise. Let x_31, x_32, x_33 be 1 if Projects 1, 2, and 3 are assigned to Engineer C, respectively, and 0 otherwise.Costs: c_11 = 919, c_12 = 556, c_13 = 951; c_21 = 21, c_22 = 640, c_23 = 409; c_31 = 59, c_32 = 786, c_33 = 304.",,"min 919x_11 + 556x_12 + 951x_13 + 21x_21 + 640x_22 + 409x_23 + 59x_31 + 786x_32 + 304x_33
+subject to
+    x_11 + x_12 + x_13 = 1
+    x_21 + x_22 + x_23 = 1
+    x_31 + x_32 + x_33 = 1
+    x_11 + x_21 + x_31 = 1
+    x_12 + x_22 + x_32 = 1
+    x_13 + x_23 + x_33 = 1
+    x_11, x_12, x_13, x_21, x_22, x_23, x_31, x_32, x_33 _ {0,1}",,Others without csv
+"In a hospital, there are three specialist doctors who need to be assigned to three different departments. We call these doctors Doctor A, B, and C, and the departments are referred to as Departments 1, 2, and 3. The efficiency of each doctor working in different departments is quantified by the time needed to complete an equal amount of work, which reflects the applicability of the doctor__ expertise and experience to that particular department. Doctor A needs t_11 hours to work in Department 1, t_12 hours for Department 2, and t_13 hours for Department 3. Doctor B needs t_21 hours for Department 1, t_22 hours for Department 2, and t_23 hours for Department 3. Doctor C has an efficiency of t_31 hours for Department 1, t_32 hours for Department 2, and t_33 hours for Department 3. The hospital__ goal is to find an optimal doctor-to-department matching scheme that minimizes the total time doctors need to complete their tasks. Each department can only be managed by one doctor, and each doctor can only work in one department at a time. Let x_11, x_12, x_13 be 1 if Departments 1, 2, and 3 are assigned to Doctor A, respectively, and 0 otherwise. Let x_21, x_22, x_23 be 1 if Departments 1, 2, and 3 are assigned to Doctor B, respectively, and 0 otherwise. Let x_31, x_32, x_33 be 1 if Departments 1, 2, and 3 are assigned to Doctor C, respectively, and 0 otherwise.Time needed: t_11 = 213, t_12 = 73, t_13 = 241; t_21 = 336, t_22 = 567, t_23 = 485; t_31 = 174, t_32 = 857, t_33 = 434.",,"min 213x_11 + 73x_12 + 241x_13 + 336x_21 + 567x_22 + 485x_23 + 174x_31 + 857x_32 + 434x_33
+subject to 
+    x_11 + x_12 + x_13 = 1
+    x_21 + x_22 + x_23 = 1
+    x_31 + x_32 + x_33 = 1
+    x_11 + x_21 + x_31 = 1
+    x_12 + x_22 + x_32 = 1
+    x_13 + x_23 + x_33 = 1
+   x_11, x_12, x_13, x_21, x_22, x_23, x_31, x_32, x_33 _ {0,1}",,Others without csv
+"In the construction industry, we have three managers named Managers A, B, and C, who need to be allocated to three construction projects, named Projects 1, 2, and 3. Each manager incurs different costs for each project, based on their experience and expertise. Manager A__ costs are c_11 dollars for Project 1, c_12 dollars for Project 2, and c_13 dollars for Project 3. Manager B__ costs are c_21 dollars for Project 1, c_22 dollars for Project 2, and c_23 dollars for Project 3. Manager C__ costs are c_31 dollars for Project 1, c_32 dollars for Project 2, and c_33 dollars for Project 3. The objective is to find the optimal assignment that minimizes the total cost of completing all projects. Each manager should be assigned to the project  their cost is the lowest, ensuring each project is managed by only one manager, and each manager handles only one project. Let b_11, b_12, b_13 be 1 if Projects 1, 2, and 3 are assigned to Manager A, respectively, and 0 otherwise. Let b_21, b_22, b_23 be 1 if Projects 1, 2, and 3 are assigned to Manager B, respectively, and 0 otherwise. Lastly, let b_31, b_32, b_33 be 1 if Projects 1, 2, and 3 are assigned to Manager C, respectively, and 0 otherwise.Costs: c_11 = 3000, c_12 = 3200, c_13 = 3100; c_21 = 2800, c_22 = 3300, c_23 = 2900; c_31 = 2900, c_32 = 3100, c_33 = 3000.",,"min 3000b_11 + 3200b_12 + 3100b_13 + 2800b_21 + 3300b_22 + 2900b_23 + 2900b_31 + 3100b_32 + 3000b_33
+subject to 
+    b_11 + b_12 + b_13 = 1
+    b_21 + b_22 + b_23 = 1
+    b_31 + b_32 + b_33 = 1
+    b_11 + b_21 + b_31 = 1
+    b_12 + b_22 + b_32 = 1
+    b_13 + b_23 + b_33 = 1
+    b_11, b_12, b_13, b_21, b_22, b_23, b_31, b_32, b_33 _ {0, 1}",,Others without csv
+"We have three event planners named Planners A, B, and C. They need to be assigned to three distinct events, labeled Events 1, 2, and 3. Each planner incurs different costs to manage each event, reflecting their creativity and efficiency. Planner A__ costs are c_11 dollars for Event 1, c_12 dollars for Event 2, and c_13 dollars for Event 3. Planner B__ costs are c_21 dollars for Event 1, c_22 dollars for Event 2, and c_23 dollars for Event 3. Planner C__ costs are c_31 dollars for Event 1, c_32 dollars for Event 2, and c_33 dollars for Event 3. Our goal is to assign planners to events in a way that minimizes the total cost, ensuring each event is assigned to only one planner, and each planner handles only one event. Let c_11, c_12, c_13 be 1 if Events 1, 2, and 3 are assigned to Planner A, respectively, and 0 otherwise. Let c_21, c_22, c_23 be 1 if Events 1, 2, and 3 are assigned to Planner B, respectively, and 0 otherwise. Let c_31, c_32, c_33 be 1 if Events 1, 2, and 3 are assigned to Planner C, respectively, and 0 otherwise.Costs: c_11 = 1500, c_12 = 1700, c_13 = 1600; c_21 = 1400, c_22 = 1800, c_23 = 1500; c_31 = 1300, c_32 = 1600, c_33 = 1700.",,"min 1500x_11 + 1700x_12 + 1600x_13 + 1400x_21 + 1800x_22 + 1500x_23 + 1300x_31 + 1600x_32 + 1700x_33
+subject to
+    x_11 + x_12 + x_13 = 1
+    x_21 + x_22 + x_23 = 1
+    x_31 + x_32 + x_33 = 1
+    x_11 + x_21 + x_31 = 1
+    x_12 + x_22 + x_32 = 1
+    x_13 + x_23 + x_33 = 1
+    x_11, x_12, x_13, x_21, x_22, x_23, x_31, x_32, x_33 _ {0,1}",,Others without csv
+"A large company is planning to open new chain stores, and the selection of optimal locations is critical to its expansion strategy. Each potential location has associated setup costs, with data provided in __ixed_cost.csv._ The company aims to minimize total costs by strategically selecting store locations while considering various constraints such as budget limits, and demand fulfillments. The primary mission of stores is to fulfill various customer demands, which are listed in ""demand.csv"". Considering distinct geographic location, transportation cost information is provided in ""transportation_cost.csv"". Besides, the inventory limitation of each store should not be neglected. The objective is to determine which locations to select for new stores and how to fulfill demands under limited inventory. The optimal policy should minimize the total operation costs, including setup costs and transportation costs. The binary decision variables y_i denote whether a store is open or not. The continuous decision variables x_{ij} represent the fulfillment quantity from store i to customer j. ","FLP_testing/FLP1/demand.csv
+FLP_testing/FLP1/fixed_cost.csv
+FLP_testing/FLP1/transportation_costs.csv",,,Facility Location Problem
+"An online store plans to open new distribution centers in the upcoming term to address last-mile fulfillment challenges. Each potential location involves fixed construction costs, detailed in ""fixed_cost.csv."" The primary role of these distribution centers is to meet various customer demands, which are specified in ""demand.csv."" Considering different geographic locations, transportation cost details are provided in ""transportation_cost.csv."" Additionally, each store's inventory constraints must be considered. The objective is to determine the optimal locations for the new distribution centers and decide how to fulfill customer demands within the limits of available inventory. The optimal strategy aims to minimize total operational costs, encompassing setup and transportation expenses. ","FLP_testing/FLP2/demand.csv
+FLP_testing/FLP2/fixed_cost.csv
+FLP_testing/FLP2/transportation_costs.csv",,,Facility Location Problem
+"For all flight ticket choices in 'information1.csv' with attraction values in v1 and ratios in v2, write the SBLP formulation for POS B flights departing at 18:30, 22:45, 19:10, 7:40 and POS C with departure time at 12:25, 13:05, 14:15, 14:25, 15:40, 15:45 following sales-based linear programming structure.",v1.csv/v2.csv/information_addB_2.csv,,,Sales-Based Linear Programming
+"For all flight ticket choices in 'information1.csv' with attraction values in v1 and ratios in v2, write the SBLP formulation for POS A/B/C flights departing at 15:40 following sales-based linear programming structure.",v1.csv/v2.csv/information_addB_2.csv,,,Sales-Based Linear Programming
+"For all flight ticket choices detailed in 'information1.csv',and the attraction values ratios are in the data frame v2, and the attraction values are in data frame v1. write the sales-based linear formulation, including objective functions, capacity constraints, balance constraints, scale constraints, and nonnegative constraints for all flight ticket choices with POS A and departure time at 11:20, following sales-based linear programming structure.",v1.csv/v2.csv/information_addB_2.csv,,,Sales-Based Linear Programming
+"Based on all flight ticket choices in 'information.csv' with attraction values in v1 and shadow attraction value ratios in v2, develop the SBLP(sales-based linear programming) formulation  with flights (OD = ('B', 'A') AND Departure Time='12:25'), (OD = ('C', 'B') AND Departure Time='14:15'), (OD = ('B', 'A') AND Departure Time='20:25') that maximize the total revenue of flight ticket sales. The SBLP should include decision variables, objective function, balance constraints, scale constraints, nonnegative constraints.",v1.csv/v2.csv/information_addB_2.csv,,,Sales-Based Linear Programming
+"Based on flight ticket options provided in the table, along with their average passengers (Avg Pax), average prices (Avg Price), and capacity coefficients (Flex Cpy Coef), considering that each Eco_flex ticket consumes 3 units of flight capacity and each Eco_lite ticket consumes 1 unit of capacity, while enforcing flow conservation constraints at each airport for long-term planning model, develop a Sales-Based Linear Programming (SBLP) model. 
+
+The goal of this model is to recommend the optimal 2 flights that maximize total ticket sale revenue, specifically among flights where the origin-destination pairs are: 
+OD = ('A', 'B') or OD = ('A', 'C') or OD = ('B', 'A') or OD = ('B', 'C') or ('C', 'A') or ('C', 'B') in a departure period (7am-4:05pm) in which the optional flights are:
+[(OD = ('C', 'A') AND Departure Time='7:40'),
+(OD = ('C', 'B') AND Departure Time='7:40'),
+(OD = ('B', 'A') AND Departure Time='9:05'),
+(OD = ('C', 'B') AND Departure Time='10:45'),
+(OD = ('A', 'B') AND Departure Time='16:05')]",v1.csv/v2.csv/information_addB_2.csv,,,Sales-Based Linear Programming

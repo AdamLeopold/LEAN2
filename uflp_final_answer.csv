@@ -1,0 +1,173 @@
+Query,model_output,code_output
+"Amazon operates multiple distribution centers that are responsible for supplying essential goods daily to various customer groups. The daily demand for each customer group is provided in ""customer_demand.csv"", while the daily supply capacity of the distribution centers is detailed in ""supply_capacity.csv"". The transportation cost per unit of goods from each distribution center to each customer group is recorded in ""transportation_costs.csv"". The objective is to determine the quantity of goods to be transported from each distribution center to each customer group, ensuring that all customer demands are met without exceeding the supply capacity of any distribution center, while minimizing the total transportation cost.","Minimize
+   0.0712113296922013 x_S3_C1 + 180.3996497782258 x_S3_C2 + ... + 0.0712113296922013 x_S5_C1 + 180.3996497782258 x_S5_C2 + ... 
+Subject To
+ demand_constraint:
+ x_S3_C1 + x_S5_C1 + ... >= 4415
+ x_S3_C2 + x_S5_C2 + ... >= 5430
+ ...
+ capacity_constraint:
+ x_S3_C1 + x_S3_C2 + ... <= 350
+ x_S5_C1 + x_S5_C2 + ... <= 6585
+ ...
+Generals
+ x_S3_C1  x_S3_C2  ...  x_S5_C1  x_S5_C2  ...  
+END","import gurobipy as gp
+from gurobipy import GRB
+
+# Create the model
+m = gp.Model(""Optimization_Model"")
+
+# Decision variables
+x_S3_C1 = m.addVar(vtype=GRB.INTEGER, name=""x_S3_C1"")
+x_S3_C2 = m.addVar(vtype=GRB.INTEGER, name=""x_S3_C2"")
+x_S5_C1 = m.addVar(vtype=GRB.INTEGER, name=""x_S5_C1"")
+x_S5_C2 = m.addVar(vtype=GRB.INTEGER, name=""x_S5_C2"")
+
+# Objective function
+m.setObjective(0.0712113296922013 * x_S3_C1 + 180.3996497782258 * x_S3_C2 + 0.0712113296922013 * x_S5_C1 + 180.3996497782258 * x_S5_C2, GRB.MINIMIZE)
+
+# Constraints
+m.addConstr(x_S3_C1 + x_S5_C1 >= 4415, name=""demand_constraint_1"")
+m.addConstr(x_S3_C2 + x_S5_C2 >= 5430, name=""demand_constraint_2"")
+m.addConstr(x_S3_C1 + x_S3_C2 <= 350, name=""capacity_constraint_1"")
+m.addConstr(x_S5_C1 + x_S5_C2 <= 6585, name=""capacity_constraint_2"")
+
+# Solve the model
+m.optimize()"
+"multiple supermarkets require inventory, and several suppliers located in different cities can provide the necessary goods. Each supplier incurs a fixed cost upon starting operations, with the fixed cost data provided in ""fixed_costs.csv."" Each supermarket needs to source a unit good from these suppliers. For each supermarket, the transportation cost per unit of goods from each supplier is recorded in ""transportation_costs.csv."" Demand information can be gained in 'demand.csv'. The objective is to determine which suppliers to open so that the demand of all supermarkets is met while minimizing the total cost. The decision variables y_i are binary, indicating whether a supplier is operational (open). The decision variables x_ij represent the quantity of goods that supermarket S_j sources from supplier F_i. For each supermarket, x_ij represents the proportion of the total supply obtained from different suppliers. These decision variables help determine the optimal allocation of supply to minimize the total of fixed and transportation costs.","Minimize \sum_i \sum_j A_i_j*x_i_j + \sum_i c_i*y_i
+Subject To
+demand_constraint: \sum_i x_i_j = d[j], \forall j
+M_constraint: - M y_i + \sum_j x_i_j <= 0, \forall i
+Non-negativity constraint: x_i_j >= 0, \forall i,j
+Binary constraint: y_i is binary, \forall i, where  d=[1097, 61, 11, 7, 82, 37]
+c=[98.87825202, 99.7344528, 94.00738781, 93.77294394, 112.6468047, 97.05463247]
+A=[[2.84107606e+02, 5.37846219e+01, 1.06209056e+01, 1.11271175e+02, 1.58504010e+02, 8.78798279e+00],
+ [7.19481423e+00, 1.03195754e+03, 9.09395987e+01, 2.76971659e+02, 4.54951623e-01, 1.97922191e-01],
+ [1.51104328e+02, 8.84479408e+02, 4.33179569e+00, 2.77037825e+02, 3.30413891e-01, 1.88281102e-01],
+ [1.44164613e+02, 8.68746702e+02, 9.41977627e+01, 2.85479915e+02, 1.69256735e+01, 9.41350640e-01],
+ [7.17824975e+00, 4.91286979e+01, 9.07202381e+01, 2.77566320e+02, 3.68770434e-01, 5.84529832e-01],
+ [1.04377035e+02, 1.32434991e+03, 1.82938789e+03, 1.85756786e+03, 1.78269346e+03, 2.07946686e+03]].","import gurobipy as gp
+from gurobipy import GRB
+import numpy as np
+
+# Data
+d = np.array([1097, 61, 11, 7, 82, 37])
+c = np.array([98.87825202, 99.7344528, 94.00738781, 93.77294394, 112.6468047, 97.05463247])
+A = np.array([[2.84107606e+02, 5.37846219e+01, 1.06209056e+01, 1.11271175e+02, 1.58504010e+02, 8.78798279e+00],
+ [7.19481423e+00, 1.03195754e+03, 9.09395987e+01, 2.76971659e+02, 4.54951623e-01, 1.97922191e-01],
+ [1.51104328e+02, 8.84479408e+02, 4.33179569e+00, 2.77037825e+02, 3.30413891e-01, 1.88281102e-01],
+ [1.44164613e+02, 8.68746702e+02, 9.41977627e+01, 2.85479915e+02, 1.69256735e+01, 9.41350640e-01],
+ [7.17824975e+00, 4.91286979e+01, 9.07202381e+01, 2.77566320e+02, 3.68770434e-01, 5.84529832e-01],
+ [1.04377035e+02, 1.32434991e+03, 1.82938789e+03, 1.85756786e+03, 1.78269346e+03, 2.07946686e+03]])
+
+# Create the model
+m = gp.Model(""Optimization_Model"")
+
+# Decision variables
+x = m.addVars(A.shape[0], A.shape[1], lb=0, name=""x"")
+y = m.addVars(A.shape[0], vtype=GRB.BINARY, name=""y"")
+
+# Objective function
+m.setObjective(gp.quicksum(A[i, j]*x[i, j] for i in range(A.shape[0]) for j in range(A.shape[1])) + gp.quicksum(c[i]*y[i] for i in range(A.shape[0])), GRB.MINIMIZE)
+
+# Constraints
+for j in range(A.shape[1]):
+    m.addConstr(gp.quicksum(x[i, j] for i in range(A.shape[0])) == d[j], name=f""demand_constraint_{j}"")
+
+M = 1000000  # large number
+for i in range(A.shape[0]):
+    m.addConstr(-M*y[i] + gp.quicksum(x[i, j] for j in range(A.shape[1])) <= 0, name=f""M_constraint_{i}"")
+
+# Solve the model
+m.optimize()"
+"A small bakery in South Korea, and each day need to stock up on various types of bread. For each type of bread, we have an expected profit, which can be found in ""products.csv."" However, the shop has limited storage capacity, with details provided in ""capacity.csv."" Therefore, we must decide which types of bread to order each day to maximize our total expected profit while staying within our storage limits. The decision variables x_i represents the number of units of bread type i to be ordered each day.","Maximize
+   921 x_0 + 370 x_1 + 129 x_2 + 888 x_3 + 154 x_4 + 765 x_5 + 134 x_6 + 584 x_7 + 365 x_8 + 837 x_9
+   
+Subject To
+ capacity_constraint: 
+ 2 x_0 + 3 x_1 + 4 x_2 + 4 x_3 + 2 x_4 + 1 x_5 + 2 x_6 + 3 x_7 + 3 x_8 + 1 x_9 <= 180
+
+Generals
+ x_0  x_1  x_2  x_3  x_4  x_5  x_6  x_7  x_8  x_9
+END","import gurobipy as gp
+from gurobipy import GRB
+
+# Create the model
+m = gp.Model(""Optimization_Model"")
+
+# Decision variables
+x = m.addVars(10, vtype=GRB.INTEGER, name=""x"")
+
+# Objective function
+m.setObjective(921 * x[0] + 370 * x[1] + 129 * x[2] + 888 * x[3] + 154 * x[4] + 765 * x[5] + 134 * x[6] + 584 * x[7] + 365 * x[8] + 837 * x[9], GRB.MAXIMIZE)
+
+# Constraints
+m.addConstr(2 * x[0] + 3 * x[1] + 4 * x[2] + 4 * x[3] + 2 * x[4] + 1 * x[5] + 2 * x[6] + 3 * x[7] + 3 * x[8] + 1 * x[9] <= 180, name=""capacity_constraint"")
+
+# Solve the model
+m.optimize()"
+"""The mobile device retailer specializes in a range of products (e.g., smartphones, feature phones), with revenue data detailed in the ""Revenue"" column. Demand exhibits heterogeneous patterns across regions (with independent fluctuations in markets such as North America, Europe, and Asia). The company seeks to maximize total expected revenue by optimizing order fulfillment strategies under constraints of fixed initial inventory (""Initial Inventory"" column), with no restocking or in-transit inventory permitted during the sales cycle.
+
+Customer order inquiries arrive sequentially via a Poisson stochastic process (intensity parameters specified in the ""Demand"" column), where decision variables x_i denote the positive integer quantity of orders planned for fulfillment per product i. The core problem can be modeled as a stochastic programming framework that maps inventory allocation to revenue maximization under multi-regional demand uncertainty. This involves solving for resource distribution that achieves system-optimal marginal revenue yield under rigid inventory constraints.""","{'input': '""The mobile device retailer specializes in a range of products (e.g., smartphones, feature phones), with revenue data detailed in the ""Revenue"" column. Demand exhibits heterogeneous patterns across regions (with independent fluctuations in markets such as North America, Europe, and Asia). The company seeks to maximize total expected revenue by optimizing order fulfillment strategies under constraints of fixed initial inventory (""Initial Inventory"" column), with no restocking or in-transit inventory permitted during the sales cycle.\n\nCustomer order inquiries arrive sequentially via a Poisson stochastic process (intensity parameters specified in the ""Demand"" column), where decision variables x_i denote the positive integer quantity of orders planned for fulfillment per product i. The core problem can be modeled as a stochastic programming framework that maps inventory allocation to revenue maximization under multi-regional demand uncertainty. This involves solving for resource distribution that achieves system-optimal marginal revenue yield under rigid inventory constraints.""', 'output': 'The general form of the problem would be:\n\nmaximize: ∑(revenue_i * x_i) for all i\nsubject to:\nx_i <= initial inventory_i for all i\nx_i <= demand_i for all i\nx_i ∈ Z+ for all i\n\nwhere i represents each product.'}","```python
+import gurobipy as gp
+from gurobipy import GRB
+import pandas as pd
+
+# Load data
+revenue = pd.read_csv('revenue.csv', index_col=0)
+initial_inventory = pd.read_csv('initial_inventory.csv', index_col=0)
+demand = pd.read_csv('demand.csv', index_col=0)
+
+# Create the model
+m = gp.Model(""Revenue_Optimization"")
+
+# Decision variables
+x = m.addVars(revenue.index, vtype=GRB.INTEGER, name=""x"")
+
+# Objective function
+m.setObjective(
+    gp.quicksum(float(revenue.loc[i, 'revenue'])*x[i] for i in revenue.index), 
+    GRB.MAXIMIZE
+)
+
+# Constraints
+for i in initial_inventory.index:
+    m.addConstr(x[i] <= float(initial_inventory.loc[i, 'initial_inventory']), name=f""inventory_constraint_{i}"")
+
+for i in demand.index:
+    m.addConstr(x[i] <= float(demand.loc[i, 'demand']), name=f""demand_constraint_{i}"")
+
+# Solve the model
+m.optimize()
+```"
+"We have a set of engineers and a set of projects. Each engineer incurs different costs to complete different projects, reflecting their familiarity and efficiency with each task. The cost information for each engineer and project is saved in the CSV file ""engineer_project_costs.csv"", where each row represents an engineer, and each column represents the cost for that engineer to complete a specific project. The goal is to find an assignment method that minimizes the total cost of completing all projects, ensuring that each engineer is assigned to exactly one project and each project is assigned to exactly one engineer, while minimizing the cost for each engineer to complete the assigned project. ","Minimize
+919 x_11 + 556 x_12 + 951 x_13 + 21 x_21 +  640 x_22 + 409 x_23 + 59 x_31+ 786x_32+ 304x_33
+Subject To
+x_11 + x_12 + x_13 = 1
+x_21 + x_22 + x_23 = 1
+x_31 + x_32 + x_33 = 1
+x_11 + x_21 + x_31 = 1
+x_12 + x_22 + x_32 = 1
+x_13 + x_23 + x_33 = 1
+x_ij binary","import gurobipy as gp
+from gurobipy import GRB
+
+# Create the model
+m = gp.Model(""Optimization_Model"")
+
+# Decision variables
+x = m.addVars(3, 3, vtype=GRB.BINARY, name=""x"")
+
+# Objective function
+m.setObjective(919 * x[0,0] + 556 * x[0,1] + 951 * x[0,2] + 21 * x[1,0] + 640 * x[1,1] + 409 * x[1,2] + 59 * x[2,0] + 786 * x[2,1] + 304 * x[2,2], GRB.MINIMIZE)
+
+# Constraints
+for i in range(3):
+    m.addConstr(gp.quicksum(x[i, j] for j in range(3)) == 1, name=f""row_constraint_{i}"")
+
+for j in range(3):
+    m.addConstr(gp.quicksum(x[i, j] for i in range(3)) == 1, name=f""column_constraint_{j}"")
+
+# Solve the model
+m.optimize()"
