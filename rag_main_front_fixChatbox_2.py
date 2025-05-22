@@ -100,20 +100,37 @@ if has_document == "Yes":
 
         # Define few-shot examples as a string  小样本示例（Few-shot Learning）配置 ================================
         few_shot_examples_csv = """
-    
-    Query: What is the problem type in operation of the text? Please give the answer directly. Text:There are three best-selling items (P1, P2, P3) on Amazon with the profit w_1,w_2,w_3.There is an independent demand stream for each of the products. The objective of the company is to decide which demands to be fufilled over a ﬁnite sales horizon [0,10] to maximize the total expected revenue from ﬁxed initial inventories. The on-hand inventories for the three items are c_1,c_2,c_3 respectively. During the sales horizon, replenishment is not allowed and there is no any in-transit inventories. Customers who want to purchase P1,P2,P3 arrive at each period accoring to a Poisson process with a_1,a_2,a_3 the arrival rates respectively. Decision variables y_1,y_2,y_3 correspond to the number of requests that the firm plans to fulfill for product 1,2,3. These variables are all positive integers.
-    
-    Thought: I need to determine the problem type of the text. The Query contains descriptions like '.csv' or 'column'. I'll use the FileQA tool to retrieve the relevant information.
-    
-    Action: FileQA
-    
-    Action Input: "What is the problem type in operation of the text? text:There are three best-selling items (P1, P2, P3) on Amazon with the profit w_1, w_2, w_3. ..."
-    
-    Observation: The problem type of the text is Network Revenue Management.
-    
-    Final Answer: Network Revenue Management.
-    
-    """
+
+Query: What is the problem type in operation of the text? Please give the answer directly. Text:There are three best-selling items (P1, P2, P3) on Amazon with the profit w_1,w_2,w_3.There is an independent demand stream for each of the products. The objective of the company is to decide which demands to be fufilled over a ﬁnite sales horizon [0,10] to maximize the total expected revenue from ﬁxed initial inventories. The on-hand inventories for the three items are c_1,c_2,c_3 respectively. During the sales horizon, replenishment is not allowed and there is no any in-transit inventories. Customers who want to purchase P1,P2,P3 arrive at each period accoring to a Poisson process with a_1,a_2,a_3 the arrival rates respectively. Decision variables y_1,y_2,y_3 correspond to the number of requests that the firm plans to fulfill for product 1,2,3. These variables are all positive integers.
+
+Thought: I need to determine the problem type of the text. The Query contains descriptions like '.csv' or 'column'. I'll use the FileQA tool to retrieve the relevant information.
+
+Action: FileQA
+
+Action Input: "What is the problem type in operation of the text? text:There are three best-selling items (P1, P2, P3) on Amazon with the profit w_1, w_2, w_3. ..."
+
+Observation: The problem type of the text is Network Revenue Management.
+
+Thought: The problem type Network Revenue Management is in the allowed list [Network Revenue Management, Resource Allocation, Transportation, Facility Location Problem, Assignment Problem]. I could get the final answer and finish.
+
+Final Answer: Network Revenue Management.
+
+---
+Query: What is the problem type in operation of the text? Please give the answer directly. Text:A supermarket needs to allocate various products, including high-demand items like the Sony Alpha Refrigerator, Sony Bravia XR, and Sony PlayStation 5, across different retail shelves. The product values and space requirements are provided in the "Products.csv" dataset. Additionally, the store has multiple shelves, each with a total space limit and specific space constraints for Sony and Apple products, as outlined in the "Capacity.csv" file. The goal is to determine the optimal number of units of each Sony product to place on each shelf to maximize total value while ensuring that the space used by Sony products on each shelf does not exceed the brand-specific limits. The decision variables x_ij represent the number of units of product i to be placed on shelf j.
+
+Thought: I need to determine the problem type of the text. The Query contains descriptions like '.csv' or 'column'. I'll use the FileQA tool to retrieve the relevant information.
+
+Action: FileQA
+
+Action Input: "What is the problem type in operation of the text? Text:A supermarket needs to allocate various products, including high-demand items like the Sony Alpha Refrigerator, Sony Bravia XR, ...."
+
+Observation: The problem type of the text is Inventory Management.
+
+Thought: The problem type Inventory Management is not in the allowed list [Network Revenue Management, Resource Allocation, Transportation, Facility Location Problem, Assignment Problem]. I need to review the query again and classify it to a type in the allowed list. According to the text, the problem type should be Resource Allocation. 
+
+Final Answer: Resource Allocation
+
+"""
 
         few_shot_examples_without_csv = """
     Query: A book distributor needs to shuffle a bunch of books from two warehouses (supply points: W1, W2) to libraries (demand points: L1, L2), using a pair of sorting centers (transshipment points: C1, C2). W1 has a stash of up to p_1 books per day it can send out. W2 can send out up to p_2 books daily. Library L1 needs a solid d_1 books daily. L2 requires d_2 books daily. Storage at the sorting centers has no cap. Transportation costs: From W1 to C1 is t_11 dollars, to C2 is t_12 dollars. From W2 to C1 is t_21 dollars, and to C2 it__ t_22 dollars. From the centers to the libraries: From C1 to L1, it__l cost t_31 dollars, to L2 it__ t_32 dollars. From C2 to L1, it__ t_41 dollars, to L2 it__ t_42 dollars. The strategy here is all about minimizing transportation spend while making sure those libraries get their books on time. We__l use x_11 and x_12 to track shipments from W1 to C1 and C2, and x_21 and x_22 for shipments from W2. For the books going out to the libraries, y_11 and y_12 will handle the flow from C1 to L1 and L2, and y_21 and y_22 from C2. Variables are all positive integers.
